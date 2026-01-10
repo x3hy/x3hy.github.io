@@ -1,0 +1,22 @@
+This is the source code for my personal portfolio website,
+this website uses a template generator I wrote to pre-load
+all my user repo data from the github api. You can see
+this in action looking in the source/update.sh script 
+which pulls the latest json data from github and uses the
+generator to load the data to the website, this loaded 
+page is then written to index.html at the root of the 
+project and will then of course be displayed on the main
+page. This process allows for the website to be static
+with periodically dynamic data. 
+
+If you're interested in using a similar approach to 
+preload your websites data then go check out my repo for
+my template-generator:
+
+https://github.com/x3hy/plate
+
+Contact me through the following:
+https://github.com/x3hy
+https://x3hy.github.io
+mailto:tkf.x1os@gmail.com
+mailto:x3hy@protonmail.com
