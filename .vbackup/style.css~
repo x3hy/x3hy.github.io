@@ -1,0 +1,116 @@
+* {
+	border: none;
+	border-radius: 0px;
+	padding:0px;
+	margin:0px;
+}
+
+body {
+	height:fit-content;
+	display:none;
+	padding: 1ch 2ch;
+	max-width: 800px;
+	background:white !important;
+	color: black !important;
+}
+
+em, h2, button:hover {
+	color: #990099
+}
+
+tr:hover:not(thead tr) {
+	color:white;
+	background:#990099;
+}
+
+td {
+	padding:0px;
+	margin:0px;
+}
+
+
+hr {
+	border-top: 1px solid #C5C5C5;
+	margin: 1ch 0px;
+}
+
+code {
+  white-space: pre-line;
+  font-style:normal;
+  font-family: monospace;
+}
+
+code img {
+	max-width: 100%;
+}
+
+.info {
+	height:fit-content;
+	display:flex;
+	position:relative;
+}
+
+.info,
+article, 
+nav {
+	margin: 0px 4ch;
+}
+
+.info .profile-image {
+	position:absolute;
+	height:100%;
+	width:155px;
+	top:0;
+	left:0;
+}
+
+.info div {
+	padding-left: 160px;
+}
+
+.code-section {
+	background: #E0E0E0;
+	overflow:hidden;
+}
+
+/* Syntax highlighting stuff */
+.prettyprint, .cont-prettyprint {
+	border:1px solid grey;
+	background: #D5D5D5;
+}
+
+.cont-prettyprint .prettyprint {
+	background:none;
+	border:none;	
+	white-space: pre;
+}
+
+a {
+	text-wrap:nowrap;
+}
+
+header {
+	position:relative;
+}
+
+header .full {
+	position:absolute;
+	right:0;
+	opacity:0.5;
+	color:black;
+	font-size: 15px;
+	font-weight: normal
+}
+
+/* disable to use album cover as background */
+#activity-image {
+	background:transparent !important;
+}
+
+#activity {
+	display:none;
+}
+
+td {
+	padding-right:2ch;
+}

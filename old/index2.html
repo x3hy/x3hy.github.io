@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>x3hy</title>
+	<link rel="stylesheet" href="style2.css">
+	<meta charset="UTF-8">
+	<meta name="description" content="My portfolio wesite">
+	<meta name="keywords" content="project, portfolio, 9jh1, _3hy, 3hy, coding, programming.">
+	<meta name="author" content="9jh1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="icon" type="image/png", href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEVHcEyC+tLSAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII=">
+</head>
+<body>
+	<section class="content">
+		<nav>
+			<header>
+				<h1 title="Display Nmae">3hy</h1>
+				<p title="Username">x3hy<i class="hide" title="Pronouns">, she/her</i></p>
+				<p title="Github Followers"><b>4</b> Followers</p>
+				<p title="Github Following"><b>1</b> Following</p>
+				<button title="Open Github"><a href="https://github.com/x3hy">goto Github</a></button>
+				<hr>
+			</header>
+			<ul>
+				<li>info</li>
+				<ul>
+					<li>about me</li>
+					<li>my setup</li>
+				</ul>
+				<li>contact</li>
+				<li>journal</li>
+			</ul>
+
+			<ul>
+				<li>projects</li>
+				<!--$FOR_ALL(projects)-->
+			</ul>
+
+			<ul>
+				<li>journal</li>
+				<!--$FOR_ALL(journal)-->
+			</ul>
+		</nav>
+		<section class="page-content">
+				<i>I want my office to be quiet. The loudest thing in the room by far should be the occasional purring of the cat<br>- Linus Torvalds</i>
+				<hr>
+				<b>About Me:</b>
+				<p id="about-me">
+					I Love free (<i>as in freedom</i>) open source software and community driven projects. Some of my favorite software is made by <a href="https;//suckless.org/">Suckless Software</a> and <a href="https://www.gnu.org/home.en.html">the GNU collection</a>. I value privacy over everything, I despise subscription services. The modern digital world is a mess, having to navigate mass surveillance, censorship and the ever-increasing overabundance of artificial intelligence. Put the power back into the hands of the people.
+					<br><br>
+					I've been using technology for as long as I can remeber, along with this I've always been a fan of unix based operating systems like Linux and BSD. Over the last few months I've started daily-driving FreeBSD for development with a dualbooted ArchLinux machine for bsd-non-compatable software like steam. I am familiar with majority of linux distros and now most of the "popular" BSD varients. some of these include, Ubuntu, Linux Mint, Pop_OS, Manjaro, Arch Linux, Crux Linux, Parabola Linux, Slackware, SalixOS, OpenBSD, DragonFly BSD, NetBSD, FreeBSD, Debian and more. 
+					<br><br> 
+				</p>
+				<b>My Productivity Setup</b>
+				<p>
+					As stated before, I'm a big fan of <a href="https://suckless.org">Suckless software</a>. My main setup consists of their <a href="https://dwm.suckless.org/">Dynamic Window Manager or DWM</a>, along with this I use the <a href="https://st.suckless.org/">ST terminal</a> and the <a href="https://tools.suckless.org/dmenu">Dynamic Menu or DMENU launcher</a>. These tools in my opinion increase my productivity and of course make my desktop look pretty.
+				</p>
+				<hr>
+				<b>Projects:</b>
+				<br>
+				<p id="projects">
+					<!--$FOR_ALL(project)-->
+					<div class="item">
+						<header>
+							<h1>arr</h1>
+							<p>x3hy/arr, MIT License</p>
+							<p>Updated 15 Days ago</p>
+							<p>Gnu, C, Utility</p>
+						</header>
+						<hr>
+						<section>
+							CLI tool that executes a command on a file change.
+						</section>
+					</div>
+				</p>
+				<br>
+				<b>Contact:</b>
+				<p id="contact">
+					I'm available for discussion, review, or feedback on weekends. If you're looking to hire me then email one of the listed emails below and ensure the subject line contains the word <i>hire</i>. I should respond within one buisness day in <b>Australia standard time</b>. 
+					<br><br>
+					<div><a href="mailto:tkf.x1os@gmail.com">1. tkf.x1os@gmail.com</a></div>
+					<div><a href="mailto:x3hy@protonmail.com">2. x3hy@protonmail.com</a></div>
+				</p>
+				<hr>
+				<b>Journal:</b>
+				<p id="journal">
+					<!--$FOR_ALL(journal)-->
+					<div class="item">
+						<br>
+						<header>
+							<h1>Anti-Aliasing is awesome</h1>
+							<p>Updated 15 Days ago</p>
+							<p>Gnu, C, Utility</p>
+						</header>
+						<hr>
+						<section>
+							CLI tool that executes a command on a file change.
+						</section>
+					</div>
+				</p>
+		</section>
+	</section>
+</body>
+</html>

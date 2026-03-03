@@ -47,7 +47,7 @@
 		<nav>
 			<a href="https://github.com/x3hy"><button>Github</button></a>
 			<a href="https://github.com/x3hy?tab=repositories"><button>Repos</button></a>
-			<a href="#journal"><button>Journal</button></a>
+			<a href="journal.html"><button>Journal</button></a>
 		</nav>
 	</section>
 	<hr>
@@ -84,19 +84,8 @@
 			was updated on the D(th|st) of MMM, YYYY, to get the most up-to-date projects
 			go <a href="https://github.com/x3hy?tab=repositories">here</a>.
 		</p>
-		<table>
-			<thead>
-				<tr>
-					<td>Name</td>
-					<td>Description</td>
-					<td>Tags</td>
-					<td>Last Commit</td>
-				<tr>
-			</thead>
-			<tbody>
-				<!--!PLATE_REPOS-->
-			</tbody>
-		</table>
+		<br>	
+		<iframe src="src/pages/projects.htm" rel="import"></iframe>
 	</section>
 	<hr>
 	<br>
@@ -107,7 +96,7 @@
 		I'm avaiable for <b>discussion, review or feedback</b>.
 		If you are looking to hire me for a task, email me and use the keyword
 		<b>job</b> in the subject line. You can use the
-		<a href="mailto:tkf.x3os@gmail.com">tkf.x1os@gmail.com</a>,
+		<a href="mailto:tkf.x1os@gmail.com">tkf.x1os@gmail.com</a>,
 		address that forwards to my work email which I check every so often, <b>OR</b>
 		you can use <a href="mailto:x3hy@protonmail.com">x3hy@protonmail.com</a>
 		which forwards over SMS to my personal mobile phone.
@@ -121,19 +110,24 @@
 		<p>
 			What is a personal website without a boring journal to voice my out of touch opinons?
 		</p>
-		<table>
-			<thead>
-				<tr>
-					<td>Title</td>
-					<td>Description</td>
-					<td>Upload Date</td>
-				<tr>
-			</thead>
-			<tbody>
-				<!--!PLATE_JOURNAL-->
-			</tbody>
-		</table>
+		<br>
 	</section>
+	<table>
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Description</td>
+				<td>Upload Date</td>
+			<tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>plib</td>
+				<td>blah blah blah blah blah</td>
+				<td>date goes here</td>
+			</tr>
+		</tbody>
+	</table>
 	<hr>
 	<br>
 

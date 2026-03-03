@@ -76,12 +76,19 @@ body {
 		overflow:hidden;
 		.page-content {
 			margin-left: var(--pad);
-			border: var(--border) var(--bg-alt);
+			/*border: var(--border) var(--bg-alt);*/
 			padding:var(--pad-a) var(--pad);
 			box-sizing:border-box;
 			* {
 				
 				text-wrap:wrap;
+			}
+
+			.item {
+				border: var(--border) var(--fg-alt);
+				padding:var(--pad-a) var(--pad);
+				box-sizing: border-box;
+				margin-top:var(--pad-a);
 			}
 		}
 
@@ -123,11 +130,7 @@ body {
 						&:hover {
 							border-left: var(--border) var(--fg-alt);
 						}
-
-
-
 					}
-
 				}
 			}
 		}

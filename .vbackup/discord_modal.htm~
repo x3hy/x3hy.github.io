@@ -1,0 +1,97 @@
+<!--Discord api model for static websites-->
+<head>
+	<style>
+		body, html {
+			background: #ffffff !important;
+			color:#000000 !important;
+		}
+
+		.discord-modal {
+			em {
+				font-size:15px;
+				color:#0F0F0F
+			}
+		}
+	</style> 
+</head>
+<html>
+<body>
+	<header class="discord-modal">
+		<!--h3>
+			<span id="display-name"></span>
+			<em>
+				(<span id="username"></span>) - <span id="status"></span>
+			</em>
+		</h3--!>	
+		<hr>
+		<p>
+		<span id="activity-small-text"></span>:
+		<span id="activity-state"></span> - 
+		<span id="activity-details"></span>
+		</p>
+		<img id="activity-image">
+	</header>
+	<script>
+		//const dc_display_name = document.getElementById ("display-name");
+		//const dc_username = document.getElementById ("username");
+		//const dc_status = document.getElementById ("status");
+
+		const dc_activity_state = document.getElementById ("activity-state");
+		const dc_activity_details = document.getElementById ("activity-details");
+		const dc_activity_image = document.getElementById ("activity-image");
+		const dc_activity_small_text = document.getElementById ("activity-small-text");
+
+		// Fetch lanyard api
+		(async () => 
+		{
+			 const baseurl="https://api.lanyard.rest"
+			 fetch(baseurl + "/v1/users/878423404275990529")
+				 .then (res => res.json ())
+				 .then (data => 
+					 {
+						if (!data["success"])
+						  {
+							console.error ("Lanyard failed")
+							return
+						  }
+
+						 // User status
+						 data = data["data"];
+						 dc_display_name.innerText = data["discord_user"]["display_name"];
+						 dc_username.innerText = data["discord_user"]["username"];
+						 dc_status.innerText = data["discord_status"];
+
+						 // Media status
+						if (data["activities"])
+						  {
+							data["activities"].forEach (item => {
+								if ("name" in item && item["name"] == "Feishin")
+								  {
+									if ("state" in item)
+										dc_activity_state.innerText = item["state"];
+								
+									if ("details" in item)
+										dc_activity_details.innerText = item["details"]
+										
+									if ("assets" in item)
+									  {
+									  	if ("large_image" in item["assets"])
+									  	  {
+											let image_url = item["assets"]["large_image"];
+											image_url = "http:/" + image_url.split("http")[1].replace("%3A", ":");
+
+											console.log(image_url);
+											dc_activity_image.src = image_url;
+										  }
+										if ("small_text" in item["assets"])
+										  dc_activity_small_text.innerText = item["assets"]["small_text"]
+								  	  }
+								  }
+							})
+						  }
+					 })
+			console.log("Stopped fetching lanyard API")
+		})();
+	</script>
+</body>
+<html>
