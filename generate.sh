@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/mksh
 # Generate website using data from source
 #
 
@@ -6,7 +6,7 @@
 rm index.html
 
 # Generate projects
-plate --template="		<li><a><!--\$name--></a> <!--\$description--></li>" -i=source.html -J=source/repo.json -L=!PLATE_PROJECTS -p="data" > index.html
+plate --template="		<li><a><!--\$name--></a> - <!--\$description--></li>" -i=source.html -J=source/repo.json -L=!PLATE_PROJECTS -p="data" > index.html
 
 
 new=$(plate --template="<!--\$readme_txt-->" -i=index.html -J=source/user.json -L=!PLATE_ABOUTME)

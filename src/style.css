@@ -11,7 +11,7 @@ h1 {
 	font-size:3em;
 }
 
-h1, ul, h2, h3, p {
+h1, ul, h2, h3, p, section, code {
 	margin:0px;
 }
 
