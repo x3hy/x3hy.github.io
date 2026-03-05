@@ -1,0 +1,24 @@
+Personal portfolio generated using my custom template generator.
+(tem)plate, generator: https://github.com/x3hy/plate
+
+For more information view my website here:
+https://x3hy.github.io
+
+.
+├── generate.sh      | Use plate to load data to index.html
+├── index.html       | The plate file (page with loaded data)
+├── README           | This file
+├── source           | Data source files
+│   ├── entry.py     | Generate a new journal entry
+│   ├── fetch.py     | Download the latest github api data
+│   ├── journal.json | Data for journal entries
+│   ├── repo.json    | Data for my repositories (from github api)
+│   └── user.json    | Data for my user (from github api) 
+├── source.html      | Original website code
+└── src              | Website source files
+    ├── date.js      | Generate "time-since" times from UTC dates
+    ├── public.js    | Basic Javascript
+    └── style.css    | Very few styles
+                     |
+---------------------'
+3 directories, 12 files
