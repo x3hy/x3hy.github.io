@@ -6,9 +6,10 @@
 rm index.html
 
 # Generate projects
-plate --template="		<li><a><!--\$name--></a> - <!--\$description--></li>" -i=source.html -J=source/repo.json -L=!PLATE_PROJECTS -p="data" > index.html
+new=$(plate --template="		<li><a href=\"<!--\$html_url-->\"><!--\$name--></a> - <!--\$description--></li>" -i=source.html -J=source/repo.json -L=!PLATE_PROJECTS -p="data")
+echo "$new" > index.html
 
-
+# Load README
 new=$(plate --template="<!--\$readme_txt-->" -i=index.html -J=source/user.json -L=!PLATE_ABOUTME)
 echo "$new" > index.html
 
