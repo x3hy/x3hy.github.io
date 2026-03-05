@@ -14,5 +14,5 @@ new=$(plate --template="<!--\$readme_txt-->" -i=index.html -J=source/user.json -
 echo "$new" > index.html
 
 # Generate journals
-new=$(plate --template="		<li><!--\$title--> - <!--\$subject--></li>" -i=index.html -p="journal" -J=source/journal.json -L=!PLATE_JOURNAL)
+new=$(plate --template="		<li><details><summary><!--\$title--> - <span class=\"date\"><!--\$time--></span> ago</summary><!--\$body--></details></li>" -i=index.html -p="journal" -J=source/journal.json -L=!PLATE_JOURNAL)
 echo "$new" > index.html

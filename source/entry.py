@@ -6,13 +6,21 @@ from json import loads, dump
 
 DAT_FILE = "journal.json"
 
-def utc_now () -> str:
+
+def utc_now() -> str:
+    """
+    returns the time in utc
+    """
     return str(datetime.now(UTC))
 
-def form (body: str) -> str:
+
+def form(body: str) -> str:
+    """
+    produces the form
+    """
+
     out = {}
     out["title"] = input ("title: ")
-    out["subject"] = input("subject: ")
     out["tags"] = []
     out["body"] = body
 
@@ -26,7 +34,6 @@ def form (body: str) -> str:
 
     out["time"] = utc_now()
     return out
-            
 
 if __name__ == "__main__":
     try:

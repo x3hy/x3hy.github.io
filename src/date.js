@@ -38,3 +38,6 @@ function time_since (date)
 }
 
 console.log (time_since("2026-01-26 00:32:15.773013+00:00"))
+document.querySelectorAll('.date').forEach(element => {
+	element.innerText = time_since(element.innerText)
+})

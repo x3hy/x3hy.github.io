@@ -18,4 +18,49 @@ document.addEventListener('DOMContentLoaded', () => {
 			el.textContent = cleaned;
 		} else el.textContent = '';
 	});
+
+	document.querySelectorAll("code").forEach(element => {
+		let content = element.innerHTML;
+		let italic_count = 0;
+		let bold_bold    = 0;
+		for (let i = 0; i < content.length; i++) {
+			let letter = content[i];
+	
+			// Bold **
+			if (letter == '*' && content[i+1]  == '*'){
+				letter = (!(bold_count % 2)) ? "<b>" : "</b>";
+				bold_count++;
+				content = content.slice(0, i) + letter + content.slice(i+=2);
+			}
+
+			// Italic *
+			else if (letter == "*"){
+				letter = (!(italic_count % 2)) ? "<i>" : "</i>";
+				italic_count++;
+				content = content.slice(0, i) + letter + content.slice(i+=1);
+			}
+		}
+
+		// For each line
+		let lines = content.split('\n');
+		lines.forEach((line,line_index) => {
+			// For each word
+			let words = line.split(' ');
+			words.forEach((word, word_index) => {
+				if (word.includes("http"))
+					word = `<a target="_blank" href="${word}">${word}</a>`;
+				words[word_index] = word;
+			  })
+
+			line = words.join(' ') + '\n';
+			if (line.startsWith("#"))
+				line = `<mark>${line}</mark>`
+
+			lines[line_index] = line;
+		})
+
+		// Write formatted HTML
+		content = lines.join('');
+		element.innerHTML = content;
+	});
 });

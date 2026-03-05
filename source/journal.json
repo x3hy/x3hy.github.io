@@ -1,48 +1,12 @@
 {
     "journal": [
         {
-            "title": "test1",
-            "subject": "test2",
+            "title": "hello!",
             "tags": [
-                "test1",
-                "test2",
-                "test3"
+                ""
             ],
-            "body": "test",
-            "time": "2026-01-26 01:33:00.038652+00:00"
-        },
-        {
-            "title": "test1",
-            "subject": "test12",
-            "tags": [
-                "test2",
-                "test12\u001b3",
-                "test18023718902"
-            ],
-            "body": "test",
-            "time": "2026-01-26 01:34:56.330711+00:00"
-        },
-        {
-            "title": "test1",
-            "subject": "test2",
-            "tags": [
-                "test3",
-                "test4",
-                "test5"
-            ],
-            "body": "test",
-            "time": "2026-01-26 01:36:08.801840+00:00"
-        },
-        {
-            "title": "New projects",
-            "subject": "My methods to reducing burnouts and unmaintained projects.",
-            "tags": [
-                "c",
-                "projects",
-                "personal"
-            ],
-            "body": "\nI've been working on my argument parsing library for c *plib* for the past\nyear and a bit and I've just had the realization that my best work is done\nthrough mass iteration and when the project is spanned over a long amount\nof time. Over my spare time I've tried writing programs in similar detail \nto plib but I always come to a stop road where I've either done to much \nwork and I'm now burnt out or I've realized that the project is out of my\nskill-level or constraints. \n\nBecause of this I've decided that while I'm attending school I will do \nyearly projects in a similar style to plib in the hopes that these \nlarger projects force me to slow down and therefore actually finish the\nproject.\n\nNow that plib is DONE for the forseeable future I can focus on another\nside project. I think its fair to make a project a year seeing as it\nusualy is my best work and of course I have school and all that.\n",
-            "time": "2026-01-27 10:49:21.520462+00:00"
+            "body": "Hello to my website!",
+            "time": "2026-03-05 16:23:15.747685+00:00"
         }
     ]
 }
