@@ -31,6 +31,11 @@
       "title": "RE: I Use Arch BTW",
       "body": "I Installed CRUX linux a day before Tony Banters (@tonybtw) made a video on it. I Used FreeBSD for a long while and I was interested in CRUX mainly for its port-style package management system. I installed CRUX and off the bat the installation was pretty straight forward. The CRUX 3.8 Handbook was very in-depth about how to install and setup CRUX, the only thing I added that wasn't in the handbook was full disk encryption which worked seamlessly. CRUX has a script styled init similar to FreeBSD and so this system seemed to be the highest contender for a Linux distrobution that felt like FreeBSD. After installing CRUX linux it took about a week of bugfixing for things like steam and my graphics card to work but after that the experience has been perfect, the package system is amazing and minimal and the init system is dead-simple, zero systemd OR openrc bloat..",
       "time": "2026-03-06T07:52:00.961Z"
+    },
+    {
+      "title": "Projects update",
+      "body": "Plib has gotten to the point where I see no new features other than minor QOL macros, this is good, check it out in the projects section of this site,\n\nPlate, my template generator has also come a long way, not anywhere near perfection like Plib but its getting there! This site you're viewing was generated statically using Plate! Check it out in the projects above too!",
+      "time": "2026-03-06T08:20:43.811Z"
     }
   ]
 }
