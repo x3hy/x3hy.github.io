@@ -1,4 +1,6 @@
 #!/usr/bin/python
+# Fetches the json data from github
+
 import json
 from urllib.request import urlopen
 
