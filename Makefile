@@ -11,3 +11,8 @@ update: source/fetch.py
 # Reload source.html
 reload: generate.sh
 	./generate.sh
+
+push:
+	git add .
+	git commit -m "Auto-push: $(shell date)"
+	git push
