@@ -1,12 +1,12 @@
 PY := python3
 
 # Create a new journal entry
-new: source/entry.sh
-	source/entry.sh
+new: data/entry.sh
+	data/entry.sh
 
 # Update the website
-update: source/fetch.py
-	$(PY) source/fetch.py
+update: data/fetch.py
+	$(PY) data/fetch.py
 
 # Reload source.html
 reload: generate.sh
