@@ -5,8 +5,8 @@ import json
 from urllib.request import urlopen
 
 GH_USER="x3hy"
-USER_DAT_FILE="user.json"
-REPO_DAT_FILE="repo.json"
+USER_DAT_FILE="data/user.json"
+REPO_DAT_FILE="data/repo.json"
 
 
 # fetch a url and return its json data 

@@ -4,21 +4,28 @@ Personal portfolio generated using my custom template generator.
 For more information view my website here:
 https://x3hy.github.io
 
+This website is set up for automation, on my local machine I can run "make
+update reload push" and a new auto-commit will be pushed with updated data
+from github. 
+
+If you also want to automate your website using plate and python files take a
+look at the files below:
+
 .
-├── generate.sh      | Use plate to load data to index.html
-├── index.html       | The plate file (page with loaded data)
-├── README           | This file
-├── source           | Data source files
-│   ├── entry.py     | Generate a new journal entry
-│   ├── fetch.py     | Download the latest github api data
-│   ├── journal.json | Data for journal entries
-│   ├── repo.json    | Data for my repositories (from github api)
-│   └── user.json    | Data for my user (from github api) 
-├── source.html      | Original website code
-└── src              | Website source files
-    ├── date.js      | Generate "time-since" times from UTC dates
-    ├── public.js    | Basic Javascript
-    └── style.css    | Very few styles
-                     |
----------------------'
-3 directories, 12 files
+├── data
+│   ├── fetch.py     | Fetches all new github API data.
+│   ├── journal.json | holds the raw journal data.
+│   ├── repo.json    | Holds the repository data from the github API
+│   ├── user.json    | Holds my user information from the github API
+│   └── vim.sh       | lets me create a new journal entry in vim
+├── generate.sh      | Runs plate to generate the final page
+├── index.html       | This is the source.html file with the loaded data
+├── Makefile         | Makefile used for automation of the prior.
+├── README           | This file!
+├── source.html      | Original html file before plate adds data.
+`── src
+    ├── favicon.ico  | Basic website icon (white square)
+    ├── public.js    | Basic javascript that does a few basic formatting fixes
+    └── style.css    | VERY basic stylesheet
+
+3 directories, 15 files

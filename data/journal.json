@@ -46,6 +46,11 @@
       "title": "Thinkpad 10 working!!",
       "body": "I've had this old Thinkpad 10 Tablet (Gen 1) which has been sitting rather sadly on my bench for a few months now right next to my Thinkpad T560.. Today a new charger finally arrived and I was able to start debugging the several battery issues I ran into.. Luckily most of the issues where resolved by simply re-seating the battery header cables, the only other functionality affected was the physical docking keyboard mount that will light up but not work..\n\nI intend on using the Thinkpad 10 for my everyday carry, y'know dumbphones EDC style..",
       "time": "2026-03-06T08:25:36.792Z"
+    },
+    {
+      "title": "[New project] BLUI",
+      "body": "BLUI is a basic api for creating Terminal User Interfaces (TUI). BLUI is incredibly small and robust, BLUI is cross platform and works on Windows, Linux and MacOS. BLUI is compatable with both C and C++. HOW IT WORKS: Inside the header file it has one global variable called _BLUI, this is where all the data for EVERYTHING is held. You can use a function to append a new \"element\" to the main app structure. Each \"element\" can have one of two types, it can either be a box or a text \"element\", text elements can be aligned to the left right or center whereas all \"elements\" have properties for x and y position on the screen. BLUI doesn't have any input management yet, this is on my to-do list! Feel free to send in a PR or issue!",
+      "time": "2026-03-12T08:21:45.998Z"
     }
   ]
 }

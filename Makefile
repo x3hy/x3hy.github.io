@@ -1,12 +1,14 @@
 PY := python3
 
+all: update reload push
+
 # Create a new journal entry
-new: data/entry.sh
-	data/entry.sh
+new_entry: data/vim.sh
+	data/vim.sh
 
 # Update the website
-update: data/fetch.py
-	$(PY) data/fetch.py
+update: fetch.py
+	$(PY) fetch.py
 
 # Reload source.html
 reload: generate.sh
@@ -16,3 +18,4 @@ push:
 	git add .
 	git commit -m "Auto-push: $(shell date)"
 	git push
+
