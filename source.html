@@ -7,13 +7,37 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="robots" content="noai, noimageai">
+	<!-- Very brief styles -->
+	<style>
+
+		/* Basic body */
+		body {
+			height:fit-content;
+			max-width: 650px;
+			font-size: 0.9em;
+			margin: 50 40;
+			font-family: "Times New Roman", Times, serif;
+		}
+		
+		hr {
+			border-bottom:1px solid white;
+			opacity:0.5;
+		}
+
+		/* Single liners */
+		h1 {font-size:3em;}
+		h1, ul, h2, h3, p, section, code, summary {margin:0px;}
+		ul li {list-style-type:none;}
+		ul li a {cursor:pointer;}
+		code {white-space:pre-line;}
+	</style>
+
+	<!-- Only other remote resources: -->
 	<script defer src="src/public.js"></script>
-	<link rel="stylesheet" href="src/style.css">
 	<link rel="icon" type="image/x-icon" href="src/favicon.ico">
 </head>
 <body>
-	<em>
-		I want my office to be quiet. The loudest thing in the room 
+	<em> I want my office to be quiet. The loudest thing in the room
 		by far should be the occasional purring of the cat
 		<br>
 		- <a href="https://github.com/torvalds">Linus Torvalds</a>
@@ -22,19 +46,20 @@
 	<hr>
 	<br>
 	<h1>Lukan Snopovs</h1>
+	<a href="https://github.com/x3hy/">Github</a><a href="#journal">Journal</a><a href="#projects">Projects</a>
 	<section class="about-me">
 		<code title="Github README file">
-		!PLATE_ABOUTME
+		!PLATE_ABOUTME (about me goes here)
 		</code>
 	</section>
+
 	<ul id="projects" title="Projects">
-		!PLATE_PROJECTS
+		!PLATE_PROJECTS (projects go here)
 	</ul>
 
 	<br><hr>
 	<h3>Contact</h3>
-	<p>
-		I'm avaiable for <b>discussion, review or feedback</b>.
+	<p> I'm avaiable for <b>discussion, review or feedback</b>.
 		If you are looking to hire me for a task, email me and use the keyword
 		<b>job</b> in the subject line. You can use the
 		<a href="mailto:tkf.x3os@gmail.com">tkf.x1os@gmail.com</a>,
@@ -47,11 +72,9 @@
 
 	<br><hr>
 	<h3>Journal</h3>
-	<p>What is a personal website without a boring journal to voice my out-of-touch opinions?</p>
+	<p>What is a personal website without a boring journal to voice my out-of-touch opinions? These do derive into ramblings, I apologise.</p>
 	<ul id="journal" title="Journal">
-		!PLATE_JOURNAL
+		!PLATE_JOURNAL (journal entries go here)
 	</ul>
-
-	<p hidden>I do not consent to having this page scraped for any reason relating to (A)rtificial (I)nteligence (AI). Copyright x3hy 2026</p>
 </body>
 
