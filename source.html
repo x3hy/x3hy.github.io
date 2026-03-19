@@ -114,7 +114,28 @@
 		
 		document.addEventListener('DOMContentLoaded', () => {
 			document.querySelectorAll('pre, code, .code, .highlight, .sourceCode').forEach(el => {
-				const lines = el.textContent.split(/\\r?\\n/);
+				// Loop through each character and collect lines
+				const text = el.textContent;
+				const lines = [];
+				let currentLine = "";
+				for (let i = 0; i < text.length; i++) {
+				  const char = text.charAt(i);
+				  const charCode = char.charCodeAt(0);
+				
+				  // Check for the ASCII codes for line breaks: 10 (\n) or 13 (\r)
+				  if (charCode === 10 || charCode === 13) {
+				    if (currentLine) {
+				      lines.push(currentLine); // Add the current line to the array
+				    }
+				    currentLine = ""; // Reset current line
+				  } else {
+				    currentLine += char; // Add the character to the current line
+				  }
+				}
+				
+				if (currentLine) {
+				  lines.push(currentLine); // Push the last line
+				}
 				
 				let start = 0;
 				while (start < lines.length && lines[start].trim() === '')
