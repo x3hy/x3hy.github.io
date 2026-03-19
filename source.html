@@ -182,7 +182,7 @@
 						words[word_index] = word;
 					  })
 		
-					line = words.join(' ') + '\n';
+					line = words.join(' ') + String.fromCharCode(10);
 					if (line.startsWith("#"))
 						line = `<mark>${line}</mark>`
 		

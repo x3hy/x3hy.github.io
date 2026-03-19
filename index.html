@@ -247,8 +247,7 @@ Anyway, I finally got the new parts for the T560 in the mail yesterday and I put
 						words[word_index] = word;
 					  })
 		
-					line = words.join(' ') + '
-';
+					line = words.join(' ') + String.fromCharCode(10);
 					if (line.startsWith("#"))
 						line = `<mark>${line}</mark>`
 		
