@@ -236,8 +236,7 @@ Anyway, I finally got the new parts for the T560 in the mail yesterday and I put
 				}
 		
 				// For each line
-				let lines = content.split('
-');
+				let lines = content.split(String.fromCharCode(10));
 				lines.forEach((line,line_index) => {
 					// For each word
 					let words = line.split(' ');

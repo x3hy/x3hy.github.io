@@ -172,7 +172,7 @@
 				}
 		
 				// For each line
-				let lines = content.split('\n');
+				let lines = content.split(String.fromCharCode(10));
 				lines.forEach((line,line_index) => {
 					// For each word
 					let words = line.split(' ');
