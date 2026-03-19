@@ -208,8 +208,7 @@ Anyway, I finally got the new parts for the T560 in the mail yesterday and I put
 					end--;
 				
 				if (start <= end) {
-					const cleaned = lines.slice(start, end + 1).join('
-');
+					const cleaned = lines.slice(start, end + 1).join(String.fromCharCode(10));
 					el.textContent = cleaned;
 				} else el.textContent = '';
 			});

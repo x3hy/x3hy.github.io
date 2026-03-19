@@ -144,7 +144,7 @@
 					end--;
 				
 				if (start <= end) {
-					const cleaned = lines.slice(start, end + 1).join('\n');
+					const cleaned = lines.slice(start, end + 1).join(String.fromCharCode(10));
 					el.textContent = cleaned;
 				} else el.textContent = '';
 			});
