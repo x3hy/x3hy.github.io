@@ -32,7 +32,6 @@
 		ul li {list-style-type:none;}
 		ul li a {cursor:pointer;}
 		code {white-space:pre-line;}
-		summary {margin-bottom: 2ch;}
 	</style>
 
 	<!-- Only other remote resources: -->
@@ -186,8 +185,6 @@ Anyway, I finally got the new parts for the T560 in the mail yesterday and I put
 				  const char = text.charAt(i);
 				  const charCode = char.charCodeAt(0);
 				
-				  // Check for the ASCII codes for line breaks: 10 (
-) or 13 ()
 				  if (charCode === 10 || charCode === 13) {
 				    if (currentLine) {
 				      lines.push(currentLine); // Add the current line to the array
