@@ -56,6 +56,11 @@
       "title": "Update on thinkpad + working T560",
       "body": "The Thinkpad 10 (gen 1) has been put to rest, sadly it was not a viable machine for daily work, the only USB slot did not seem to function nor did the external keyboard, this means there was no way to write using an external keyboard or even flash a new operating system.\nI had another thinkpad though, a T560 which I received with a few missing parts. It had no internet card, ram or SSD, the monsters even took the motherboard connector for the SSD! Thankfully I had 16GB (2x8GB) DDR3 that I could use for it, I also had a spare SATA M.2 drive I could use for storage drive.\nI ended up purchasing a T560 Motherboard header to SATA connector and a NVME to SATA converter so I could use the M.2 in place of the SATA SSD it had originally.\n\nWhile I waited for the parts I used a USB to boot an OS off of. The OS(s) I used for this was TinyCore linux and then AntiX Linux, both of which are made for ancient hardware.\nAnyway, I finally got the new parts for the T560 in the mail yesterday and I put it all together into a fully working T560! I can say it works perfectly now.",
       "time": "2026-03-19T01:53:35.460Z"
+    },
+    {
+      "title": "New projects update",
+      "body": "Plib 7.x.x is in development, new features like combined shorthand and a better interface system will be included in the new version, required and extra features will be separated into a plib7.h and plib7e.h (e for extra).",
+      "time": "2026-03-19T21:05:43.067Z"
     }
   ]
 }
