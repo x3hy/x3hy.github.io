@@ -61,6 +61,11 @@
       "title": "New projects update",
       "body": "Plib 7.x.x is in development, new features like combined shorthand and a better interface system will be included in the new version, required and extra features will be separated into a plib7.h and plib7e.h (e for extra).",
       "time": "2026-03-19T21:05:43.067Z"
+    },
+    {
+      "title": "new DWM updates!",
+      "body": "Hey, this is very personal but my custom build of Sucklesses Dynamic Window Manager [DWM] has gotten some great new updates! Firstly I've fixed the long time issue where ST (suckless terminal) dosn't show up on the titlebar correctly.. this was fixed by patching ST with the title parsing fix patch. I've now completly removed the use of lemonbar and now I'm running a full native DWMBar system! I had to patch status2d with lots of custom code to allow for positioning text in the center and right side of the bottom bar! this allowed me to port my old lemonbar-bar style over to dwmbar, this wasn't too hard as my bar was designed to be modular.. anyway. check it out it you want too..",
+      "time": "2026-03-26T05:53:21.442Z"
     }
   ]
 }
