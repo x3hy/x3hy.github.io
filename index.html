@@ -17,8 +17,11 @@
 			height:fit-content;
 			max-width: 650px;
 			font-size: 0.9em;
-			margin: 50 40;
+			margin: 50px 40px;
+			box-sizing:border-box;
 			font-family: "Times New Roman", Times, serif;
+			color:white;
+			background:black;
 		}
 		
 		hr {
@@ -26,12 +29,21 @@
 			opacity:0.5;
 		}
 
+		.pre {
+			white-space: pre-line;
+			display:block;
+			border: solid 1px white;
+			background: rgba(0,0,0,0.25);
+			padding: 0px 1ch;
+			font-family:monospace;
+			margin-bottom: 2ch;
+		}
+		
 		/* Single liners */
 		h1 {font-size:3em;}
 		h1, ul, h2, h3, p, section, code, summary {margin:0px;}
 		ul li {list-style-type:none;}
 		ul li a {cursor:pointer;}
-		code {white-space:pre-line;}
 	</style>
 
 	<!-- Only other remote resources: -->
@@ -49,7 +61,7 @@
 	<h1>Lukan Snopovs</h1>
 	<a href="https://github.com/x3hy/">Github</a>::<a href="#journal">Journal</a>::<a href="#projects">Projects</a>
 	<section class="about-me" role="main">
-		<code title="Github README file">
+		<div title="Github README file" class="pre">
 I'm a freelance, low-level developer. I love free (*as in freedom*), open-source software and community driven projects. Some of my favorite software is made by *suckless software* and *GNU*. I value privacy over everything and I despise subscription services to the point where I self-host nearly everything. I love simplicity and performance over style. The modern digital world is a mess, having to navigate surveillance, censorship and the ever increasing use of artificial intelligence. Put the power back in the hands of the people.
  
 Enough drivel, I have quite a few years of low-level BSD & GNU/Linux experience. My strongest programming language would be C but I've done work in the likes of x86 ASM, Rust, Odin, Python (who hasn't) and the vannila web development trio (css, html and javascript). Do not let my personal website fool you, I am quite capable in the web development field.
@@ -63,21 +75,220 @@ https://crux.nu/
 
 View my projects here:
 
-		</code>
+		</div>
 	</section>
 
 	<ul id="projects" title="Projects">
-		<li><a href="https://github.com/x3hy/arr"><span title=Language>(C)</span> <b>arr</a></b> - <i>A basic GNU style tool that runs a command on file change</i></li>
-		<li><a href="https://github.com/x3hy/blui"><span title=Language>(C)</span> <b>blui</a></b> - <i>Cross-Platform window management API, targeted at TUI, For C and C++.</i></li>
-		<li><a href="https://github.com/x3hy/canvas"><span title=Language>(C)</span> <b>canvas</a></b> - <i>This is a dwm patch that implements the "canvas" mode from wh1tepearls vxwm.</i></li>
-		<li><a href="https://github.com/x3hy/CSC"><span title=Language>(PHP)</span> <b>CSC</a></b> - <i>Level 3 Computer Science files</i></li>
-		<li><a href="https://github.com/x3hy/dwm"><span title=Language>(C)</span> <b>dwm</a></b> - <i>My personal build of suckless software's Dynamic Window Manager!</i></li>
-		<li><a href="https://github.com/x3hy/otherwise-lib"><span title=Language>(C)</span> <b>otherwise-lib</a></b> - <i>An advanced but small library that introduces a new "otherwise" keyword to C and C++.</i></li>
-		<li><a href="https://github.com/x3hy/plate"><span title=Language>(C)</span> <b>plate</a></b> - <i>Universal file tem(plate) generator made for parsing JSON into HTML.</i></li>
-		<li><a href="https://github.com/x3hy/plib"><span title=Language>(C)</span> <b>plib</a></b> - <i>A static, header-only library that implements simple argument parsing.</i></li>
-		<li><a href="https://github.com/x3hy/vim"><span title=Language>(Vim Script)</span> <b>vim</a></b> - <i>My personal vim dot-files, includes ALE, code completions and many other efficiency increasing settings.</i></li>
-		<li><a href="https://github.com/x3hy/x3hy"><span title=Language>(NULL)</span> <b>x3hy</a></b> - <i>Hosting for the "about me" on both my github profile and my website!</i></li>
-		<li><a href="https://github.com/x3hy/x3hy.github.io"><span title=Language>(HTML)</span> <b>x3hy.github.io</a></b> - <i>File source for my personal portfolio website</i></li>
+		<li><details><summary><a href="https://github.com/x3hy/arr"><span title=Language>(C)</span> <b>arr</a></b> - <i>A basic GNU style tool that runs a command on file change</i></summary><div class="pre">Auto Read-Runner
+-------------------
+
+ARR is a basic program that listens for a file change and executes a command when that occurs.
+-------------------
+
+arr [OPTIONS]
+OPTIONS:
+--command    | command run when file is modifyed
+--interval   | interval in seconds the file is checked
+--message    | message showen when file is edited
+--no-message | disable showing message
+--no-command | disable running command
+--no-startup | disable file check on script start
+-------------------
+
+git clone https://github.com/9jh1/arr
+cd arr
+make
+./arr
+</div></details></li>
+		<li><details><summary><a href="https://github.com/x3hy/blui"><span title=Language>(C)</span> <b>blui</a></b> - <i>Cross-Platform window management API, targeted at TUI, For C and C++.</i></summary><div class="pre">BlUI 1.0.0
+--------------------------------
+BLUI is a terminal graphics library for creating interfaces. BLUI is more of
+an API with some extra features than an actual TUI specific library. BLUI is
+just a low-level and basic API for interacting with windows and text elements
+on a screen. Its possible to use BLUI for window management on larger
+projects outside of the terminal!
+
+Features:
+- Header only library.
+- Tiny file size.
+- Completely static allocation (no stdlib.h).
+- Very basic usage and low-level implementation.
+- Optimised for Speed and a markup style.
+- C & C++ support.
+- Cross platform (Windows, Mac and Linux).
+
+BLUI works on a basis of elements and tagging. You can create elements and
+give them a tag/category then you can choose to draw specific tags using
+specific functions.
+--------------------------------
+
+How to use:
+To Use BLUI simply include the main "blui.h" file into your project. You
+can download the latest edge version like so:
+
+wget https://raw.githubusercontent.com/x3hy/blui/refs/heads/master/blui.h
+
+Note, if you don't have wget you can use "curl -Os <url>" instead.
+
+--------------------------------
+Look into "example.c" which contains a basic example of how BLUI can be used
+for terminal-style interfaces. Keep in mind this is a basic project and will
+not be updated frequently as it is mainly used for my personal projects.
+</div></details></li>
+		<li><details><summary><a href="https://github.com/x3hy/canvas"><span title=Language>(C)</span> <b>canvas</a></b> - <i>This is a dwm patch that implements the "canvas" mode from wh1tepearls vxwm.</i></summary><div class="pre">This is a stock version of dwm that includes the "canvas" mode seen in
+vxwm. vxwm is built on dwm. Generate a patch below, the patch will add
+the canvas mode and show the coordinates of the canvas in the dwmbar.
+
+I've provided a canvas.patch file which you can download to your dwm
+build. To instead generate the patch file from scratch you can run
+the patch.sh file or you can view the contents of it to figure out
+how to generate the patch file.
+
+Once you have the canvas.diff file (either from generating it
+yourself or downloading the pre-made one, you can apply the patch
+as you would any other dwm patch:
+patch -F3 -i canvas.diff
+
+Recompile dwm (don't forget to cat config.def.h > config.h) and it
+should work fine. Check your dwm config.def.h file for the default
+keybinds.
+
+Again, this feature was taken directly from vxwm, which is a dwm fork
+that comes with patch management and a canvas mode, so for more details
+please go and review the code or changes in vxwm:
+https://codeberg.org/wh1tepearl/vxwm
+</div></details></li>
+		<li><details><summary><a href="https://github.com/x3hy/CSC"><span title=Language>(PHP)</span> <b>CSC</a></b> - <i>Level 3 Computer Science files</i></summary><div class="pre"></div></details></li>
+		<li><details><summary><a href="https://github.com/x3hy/dwm"><span title=Language>(C)</span> <b>dwm</a></b> - <i>My personal build of suckless software's Dynamic Window Manager!</i></summary><div class="pre">My DWM setup, this is another "I wish this was unlisted" project, do not
+expect this to be updated frequently.
+
+Look at img/ for some OLD images from when i was on FreeBSD, I've now switched
+over to CRUX Linux and many smaller updates have occured and many many many
+larger backend changes.
+
+This is a very *opinionated* rice. The actual DWM build (./source/dwm) is
+mostly full of elitist code.. Lots of the patches used in this build are
+highly customised, I'd not recommend trying to add any new patches as it will
+likely be faster to manually patch it.
+</div></details></li>
+		<li><details><summary><a href="https://github.com/x3hy/otherwise-lib"><span title=Language>(C)</span> <b>otherwise-lib</a></b> - <i>An advanced but small library that introduces a new "otherwise" keyword to C and C++.</i></summary><div class="pre"></div></details></li>
+		<li><details><summary><a href="https://github.com/x3hy/plate"><span title=Language>(C)</span> <b>plate</a></b> - <i>Universal file tem(plate) generator made for parsing JSON into HTML.</i></summary><</details="pre">Plate 1.6.x
+-------------------------
+Plate is a basic tem(plate) generator for JSON. plate takes in a template and some JSON and will replace special triggers in the template with the values in the json. Plate can iterate through arrays of data and output templates of each part of the data. Plate also takes an input file where you can specifiy a "input trigger" that the template(s) will be written too.
+Plate was designed for generating static websites using data from json files. An example usecase would be a portfoio website that uses the GitHub api to populate its pages.
+-------------------------
+
+Options: 
+--template    | -t | Enter the template as a string value
+--input       | -i | Input file
+--input-link  | -L | Set input link, defaults to <!--PLATE-->
+--json-file   | -J | Enter json data as a file
+--json-string | -j | Use string JSON instead of file
+--suffix      | -s | Set the end delimiter for value substitution
+--prefix      | -p | Set the start delimiter for value searching
+--output-file | -o | Set output file location, defaults to stdout
+--json-path   | -p | Set the path for json data, defaults to.
+--help        | -h | Display this dialog.
+--version     | -v | Show version number.
+
+-----------------------
+Versioning:
+x.y.z
+x: major version, usually the current re-write
+y: mean version, usually the amount of larger updates.
+z: minor version, the amount of commitments since the last major version.
+
+----------------------
+Building:
+
+To build plate simply run:
+$ make
+
+To install plate, run
+$ sudo make install
+</div></details></li>
+		<li><details><summary><a href="https://github.com/x3hy/plib"><span title=Language>(C)</span> <b>plib</a></b> - <i>A static, header-only library that implements simple argument parsing.</i></summary><div class="pre">PLib 6.1.8
+Documentation : https://github.com/x3hy/plib/wiki
+-------------------------
+A basic and minimal C library for parsing arguments.
+
+Features:
+- Header only library 
+- Roughly ~450 lines of code.
+- Completly static allocation.
+- Optimized for user control.
+- Very simple usage and installlation.
+- Extensive error handling
+--------------------------
+
+Download/Install: 
+You only require the plib6.h file which you can download locally like so:
+
+Edge: 
+wget https://raw.githubusercontent.com/x3hy/plib/refs/heads/main/plib6.h
+
+Stable:
+wget https://raw.githubusercontent.com/x3hy/plib/refs/tags/6.1.8/plib6.h
+
+Alternativly if you do not have wget, you can use "curl -O <url>" instead.
+
+--------------------------
+example.c contains quickstart code, please view the documentation link provided at the top of the project if you're stuck.
+</div></details></li>
+		<li><details><summary><a href="https://github.com/x3hy/vim"><span title=Language>(Vim Script)</span> <b>vim</a></b> - <i>My personal vim dot-files, includes ALE, code completions and many other efficiency increasing settings.</i></summary><</details="pre">        -- Vim --
+> My personal dot-files <
+
+-------------------------
+This is my personal configuration of vim. If GitHub had unlisted repositories this would be one. My setup currently has ALE and fast completions, this setup is for performance and efficiency.
+
+-------------------------
+Some screenshots are in the ./img folder, the font used is Terminus (TTF)
+</div></details></li>
+		<li><details><summary><a href="https://github.com/x3hy/x3hy"><span title=Language>(NULL)</span> <b>x3hy</a></b> - <i>Hosting for the "about me" on both my github profile and my website!</i></summary><div class="pre">I'm a freelance, low-level developer. I love free (*as in freedom*), open-source software and community driven projects. Some of my favorite software is made by *suckless software* and *GNU*. I value privacy over everything and I despise subscription services to the point where I self-host nearly everything. I love simplicity and performance over style. The modern digital world is a mess, having to navigate surveillance, censorship and the ever increasing use of artificial intelligence. Put the power back in the hands of the people.
+ 
+Enough drivel, I have quite a few years of low-level BSD & GNU/Linux experience. My strongest programming language would be C but I've done work in the likes of x86 ASM, Rust, Odin, Python (who hasn't) and the vannila web development trio (css, html and javascript). Do not let my personal website fool you, I am quite capable in the web development field.
+
+Some more information about me: In my free time I like to listen to music, one of my favorite bands is *Armor For Sleep*. Programming is also my hobby and something that I enjoy more than most other things. In my free time (if I'm not coding) you may find me making pizza (my favorite food) or watching Neon Genesis :D.
+
+Sources:
+https://suckless.org/
+https://www.gnu.org/
+https://crux.nu/
+
+View my projects here:
+</div></details></li>
+		<li><details><summary><a href="https://github.com/x3hy/x3hy.github.io"><span title=Language>(HTML)</span> <b>x3hy.github.io</a></b> - <i>File source for my personal portfolio website</i></summary><div class="pre">Personal portfolio generated using my custom template generator.
+(tem)plate, generator: https://github.com/x3hy/plate
+
+For more information view my website here:
+https://x3hy.github.io
+
+This website is set up for automation, on my local machine I can run "make
+update reload push" and a new auto-commit will be pushed with updated data
+from github. 
+
+If you also want to automate your website using plate and python files take a
+look at the files below:
+
+.
+├── data
+│   ├── fetch.py     | Fetches all new github API data.
+│   ├── journal.json | holds the raw journal data.
+│   ├── repo.json    | Holds the repository data from the github API
+│   ├── user.json    | Holds my user information from the github API
+│   └── vim.sh       | lets me create a new journal entry in vim
+├── generate.sh      | Runs plate to generate the final page
+├── index.html       | This is the source.html file with the loaded data
+├── Makefile         | Makefile used for automation of the prior.
+├── README           | This file!
+├── source.html      | Original html file before plate adds data.
+`── src
+    ├── favicon.ico  | Basic website icon (white square)
+    ├── public.js    | Basic javascript that does a few basic formatting fixes
+    └── style.css    | VERY basic stylesheet
+
+3 directories, 15 files
+</div></details></li>
 	</ul>
 
 	<br><hr>
@@ -97,16 +308,16 @@ View my projects here:
 	<h2>Journal</h2>
 	<p>What is a personal website without a boring journal to voice my out-of-touch opinions? These do derive into ramblings, I apologise.</p>
 	<ul id="journal" title="Journal">
-		<li><details><summary>New projects - <span class="date">2025-12-02T01:23:06.100Z</span> ago</summary>I've started development on 0bchat - A end to end encrypted chat client using C. With PLib V5.0.1 I've started writing navtui, a navidrome client terminal application, both of these projects are privated at the moment but will go public on their first release. I don't want another incident with unfinished repos ehm motionlayer..</details><hr></li>
-		<li><details><summary>ew protonmail - <span class="date">2025-12-04T00:03:53Z</span> ago</summary>I've been using proton mail for a few months now, and don't get me wrong I like proton as a company and I understand that they're just trying to make some funding. Personally I'm not a big fan of the corperate presence thats becoming the norm. Now I like to use the aerc email client, small issue with this, proton dosent allow users to use clients other then their offical client.. The only way theyve provided to negate this is to have a proton-mail-plus subscription AND a desktop application (protonmail-bridge-core) which acts as the other end of the encryption that way the client using the proton email can actually read emails..
+		<li><details><summary>New projects - <span class="date">2025-12-02T01:23:06.100Z</span> ago</summary><div class="pre">I've started development on 0bchat - A end to end encrypted chat client using C. With PLib V5.0.1 I've started writing navtui, a navidrome client terminal application, both of these projects are privated at the moment but will go public on their first release. I don't want another incident with unfinished repos ehm motionlayer..</div><hr></details></li>
+		<li><details><summary>ew protonmail - <span class="date">2025-12-04T00:03:53Z</span> ago</summary><div class="pre">I've been using proton mail for a few months now, and don't get me wrong I like proton as a company and I understand that they're just trying to make some funding. Personally I'm not a big fan of the corperate presence thats becoming the norm. Now I like to use the aerc email client, small issue with this, proton dosent allow users to use clients other then their offical client.. The only way theyve provided to negate this is to have a proton-mail-plus subscription AND a desktop application (protonmail-bridge-core) which acts as the other end of the encryption that way the client using the proton email can actually read emails..
 
 I have no issue with some features being behind a paywall again proton do need to make some money somehow but this is such a basic feature..
 
 To fix this issue I've created a new email at disroot.org which provides end-to-end symetric encryption using pgp, disroot.org also supports 3rd party clients out of the box. I've set up my accounts so that my proton account forwards emails to my disroot account but in doing so I also noticed that proton does not forward emails sent from its own address so emails sent from your own email to yourself will not be forewarded.. ill also say that there are very few options given to actually change the forwarding settings.. In gmail the options to delete, archive or keep forwarded mail is right there but in proton no such feature exists. Ontop of all of this disroot also has a contact book system that allows you to import your contacts from other services eg google contacts, this is yet another feature that protonmail does not have.
 
 This website still shows a google email as a contact email all emails sent to that address will be forwarded to my disroot email. go check out disroot.org, note that they are donation run and therefore have limited time and because of this they close registrations during the weekend. After signing up you have a 48 hour period where a maintainer will have to manually approve your account request. There is no mention of the prior when signing up.
-EDIT, recently email forwarding was disabled as it is now a premium service!</details><hr></li>
-		<li><details><summary>I Use Arch BTW - <span class="date">2025-12-14T10:48:32Z</span> ago</summary>The title is a joke cowboy.. calm down.
+EDIT, recently email forwarding was disabled as it is now a premium service!</div><hr></details></li>
+		<li><details><summary>I Use Arch BTW - <span class="date">2025-12-14T10:48:32Z</span> ago</summary><div class="pre">The title is a joke cowboy.. calm down.
 
 I've been using Archlinux for quite a while now.. 3 years. I recently decided that Archlinux is far too mainstream and so I set out on finding a new OS that could fit my needs as a developer. As a developer I like to have the most up-to-date packages along with quick installation of said packages. When I install an OS I like it to have either a quick and easy setup but a long post-install setup (think BSD) OR a very advanced setup and some other features that make it worth my time. 
 
@@ -125,24 +336,24 @@ I decided to push the lack of support aside and do some developing just to see i
 Now after all of the BSD stuff I started looking into more advanced linux distros. a few that caught my eye where Gentoo and Slackware. First I tried slackware before figuring out the absolutly useless package manager and pre-installed bloat so I immediatly to SalixOS which is built ontop of slackware but also has a more usable backage manager slapt-get. I used slackware for a little until I ran into the same problem as before where packages where outdated and some where just not available. More infuriating Slackware has an online user driven repository of source packages that let you download a packages source code along with a file which can be used to compile the program. This system just reminded me of the arch AUR and PKGBUILDs. Now the issue with this slackware system is that packages are not maintained at all so it was common to find packages that EXISTED but where just uninstallable, and of course this meant installing from source and compiling manually.. nice stuff. Next on the list was Gentoo which was a day long commute to install. Gentoo comes with Systemd which is nice.. uh yeah but guess what the package manager is a compile local package mananger so when installing a package you run a very basic command, yes yes good good, then you wait 20 buisness days for it to download the source and all the dependancies before locally compiling and installing.. holy moly what a waste of time. 
 
 I'm very sure that it was me that was making these issues so apparent and I'm sure there are millions of alternative routes I could have taken. I've ended up back with arch linux which i guess solved my issue with it being mainstream.. it is mainstream because it is so easy to install now-a-days so every idiot installs it just to say they use linux while running a base kde or gnome setup. I absolultly hate those kinds of people who use something for the main reason of status or reputation.. This was the initial reason I wanted to move over to another OS. I wanted an OS that was not diluted and poisoned by outliers in the community. I guess this week long journey has given me proof that I have an actual reason to be using arch. After all that fuss I think arch is the best distro because it has both up-to-date packages and a comprehensive installation and customization process.
-</details><hr></li>
-		<li><details><summary>RE: I Use Arch BTW - <span class="date">2026-03-06T07:52:00.961Z</span> ago</summary>I Installed CRUX linux a day before Tony Banters (@tonybtw) made a video on it. I Used FreeBSD for a long while and I was interested in CRUX mainly for its port-style package management system. I installed CRUX and off the bat the installation was pretty straight forward. The CRUX 3.8 Handbook was very in-depth about how to install and setup CRUX, the only thing I added that wasn't in the handbook was full disk encryption which worked seamlessly. CRUX has a script styled init similar to FreeBSD and so this system seemed to be the highest contender for a Linux distrobution that felt like FreeBSD. After installing CRUX linux it took about a week of bugfixing for things like steam and my graphics card to work but after that the experience has been perfect, the package system is amazing and minimal and the init system is dead-simple, zero systemd OR openrc bloat..</details><hr></li>
-		<li><details><summary>Projects update - <span class="date">2026-03-06T08:20:43.811Z</span> ago</summary>Plib has gotten to the point where I see no new features other than minor QOL macros, this is good, check it out in the projects section of this site,
+</div><hr></details></li>
+		<li><details><summary>RE: I Use Arch BTW - <span class="date">2026-03-06T07:52:00.961Z</span> ago</summary><div class="pre">I Installed CRUX linux a day before Tony Banters (@tonybtw) made a video on it. I Used FreeBSD for a long while and I was interested in CRUX mainly for its port-style package management system. I installed CRUX and off the bat the installation was pretty straight forward. The CRUX 3.8 Handbook was very in-depth about how to install and setup CRUX, the only thing I added that wasn't in the handbook was full disk encryption which worked seamlessly. CRUX has a script styled init similar to FreeBSD and so this system seemed to be the highest contender for a Linux distrobution that felt like FreeBSD. After installing CRUX linux it took about a week of bugfixing for things like steam and my graphics card to work but after that the experience has been perfect, the package system is amazing and minimal and the init system is dead-simple, zero systemd OR openrc bloat..</div><hr></details></li>
+		<li><details><summary>Projects update - <span class="date">2026-03-06T08:20:43.811Z</span> ago</summary><div class="pre">Plib has gotten to the point where I see no new features other than minor QOL macros, this is good, check it out in the projects section of this site,
 
-Plate, my template generator has also come a long way, not anywhere near perfection like Plib but its getting there! This site you're viewing was generated statically using Plate! Check it out in the projects above too!</details><hr></li>
-		<li><details><summary>Is there no such thing as a cheap split-layout keyboard? - <span class="date">2026-03-06T08:22:45.366Z</span> ago</summary>The Corne V4 series split keyboards are amazing and I would get one if they weren't 500 of my currency...</details><hr></li>
-		<li><details><summary>Thinkpad 10 working!! - <span class="date">2026-03-06T08:25:36.792Z</span> ago</summary>I've had this old Thinkpad 10 Tablet (Gen 1) which has been sitting rather sadly on my bench for a few months now right next to my Thinkpad T560.. Today a new charger finally arrived and I was able to start debugging the several battery issues I ran into.. Luckily most of the issues where resolved by simply re-seating the battery header cables, the only other functionality affected was the physical docking keyboard mount that will light up but not work..
+Plate, my template generator has also come a long way, not anywhere near perfection like Plib but its getting there! This site you're viewing was generated statically using Plate! Check it out in the projects above too!</div><hr></details></li>
+		<li><details><summary>Is there no such thing as a cheap split-layout keyboard? - <span class="date">2026-03-06T08:22:45.366Z</span> ago</summary><div class="pre">The Corne V4 series split keyboards are amazing and I would get one if they weren't 500 of my currency...</div><hr></details></li>
+		<li><details><summary>Thinkpad 10 working!! - <span class="date">2026-03-06T08:25:36.792Z</span> ago</summary><div class="pre">I've had this old Thinkpad 10 Tablet (Gen 1) which has been sitting rather sadly on my bench for a few months now right next to my Thinkpad T560.. Today a new charger finally arrived and I was able to start debugging the several battery issues I ran into.. Luckily most of the issues where resolved by simply re-seating the battery header cables, the only other functionality affected was the physical docking keyboard mount that will light up but not work..
 
-I intend on using the Thinkpad 10 for my everyday carry, y'know dumbphones EDC style..</details><hr></li>
-		<li><details><summary>[New project] BLUI - <span class="date">2026-03-12T08:21:45.998Z</span> ago</summary>BLUI is a basic api for creating Terminal User Interfaces (TUI). BLUI is incredibly small and robust, BLUI is cross platform and works on Windows, Linux and MacOS. BLUI is compatable with both C and C++. HOW IT WORKS: Inside the header file it has one global variable called _BLUI, this is where all the data for EVERYTHING is held. You can use a function to append a new "element" to the main app structure. Each "element" can have one of two types, it can either be a box or a text "element", text elements can be aligned to the left right or center whereas all "elements" have properties for x and y position on the screen. BLUI doesn't have any input management yet, this is on my to-do list! Feel free to send in a PR or issue!</details><hr></li>
-		<li><details><summary>Update on thinkpad + working T560 - <span class="date">2026-03-19T01:53:35.460Z</span> ago</summary>The Thinkpad 10 (gen 1) has been put to rest, sadly it was not a viable machine for daily work, the only USB slot did not seem to function nor did the external keyboard, this means there was no way to write using an external keyboard or even flash a new operating system.
+I intend on using the Thinkpad 10 for my everyday carry, y'know dumbphones EDC style..</div><hr></details></li>
+		<li><details><summary>[New project] BLUI - <span class="date">2026-03-12T08:21:45.998Z</span> ago</summary><div class="pre">BLUI is a basic api for creating Terminal User Interfaces (TUI). BLUI is incredibly small and robust, BLUI is cross platform and works on Windows, Linux and MacOS. BLUI is compatable with both C and C++. HOW IT WORKS: Inside the header file it has one global variable called _BLUI, this is where all the data for EVERYTHING is held. You can use a function to append a new "element" to the main app structure. Each "element" can have one of two types, it can either be a box or a text "element", text elements can be aligned to the left right or center whereas all "elements" have properties for x and y position on the screen. BLUI doesn't have any input management yet, this is on my to-do list! Feel free to send in a PR or issue!</div><hr></details></li>
+		<li><details><summary>Update on thinkpad + working T560 - <span class="date">2026-03-19T01:53:35.460Z</span> ago</summary><div class="pre">The Thinkpad 10 (gen 1) has been put to rest, sadly it was not a viable machine for daily work, the only USB slot did not seem to function nor did the external keyboard, this means there was no way to write using an external keyboard or even flash a new operating system.
 I had another thinkpad though, a T560 which I received with a few missing parts. It had no internet card, ram or SSD, the monsters even took the motherboard connector for the SSD! Thankfully I had 16GB (2x8GB) DDR3 that I could use for it, I also had a spare SATA M.2 drive I could use for storage drive.
 I ended up purchasing a T560 Motherboard header to SATA connector and a NVME to SATA converter so I could use the M.2 in place of the SATA SSD it had originally.
 
 While I waited for the parts I used a USB to boot an OS off of. The OS(s) I used for this was TinyCore linux and then AntiX Linux, both of which are made for ancient hardware.
-Anyway, I finally got the new parts for the T560 in the mail yesterday and I put it all together into a fully working T560! I can say it works perfectly now.</details><hr></li>
-		<li><details><summary>New projects update - <span class="date">2026-03-19T21:05:43.067Z</span> ago</summary>Plib 7.x.x is in development, new features like combined shorthand and a better interface system will be included in the new version, required and extra features will be separated into a plib7.h and plib7e.h (e for extra).</details><hr></li>
-		<li><details><summary>new DWM updates! - <span class="date">2026-03-26T05:53:21.442Z</span> ago</summary>Hey, this is very personal but my custom build of Sucklesses Dynamic Window Manager [DWM] has gotten some great new updates! Firstly I've fixed the long time issue where ST (suckless terminal) dosn't show up on the titlebar correctly.. this was fixed by patching ST with the title parsing fix patch. I've now completly removed the use of lemonbar and now I'm running a full native DWMBar system! I had to patch status2d with lots of custom code to allow for positioning text in the center and right side of the bottom bar! this allowed me to port my old lemonbar-bar style over to dwmbar, this wasn't too hard as my bar was designed to be modular.. anyway. check it out it you want too..</details><hr></li>
+Anyway, I finally got the new parts for the T560 in the mail yesterday and I put it all together into a fully working T560! I can say it works perfectly now.</div><hr></details></li>
+		<li><details><summary>New projects update - <span class="date">2026-03-19T21:05:43.067Z</span> ago</summary><div class="pre">Plib 7.x.x is in development, new features like combined shorthand and a better interface system will be included in the new version, required and extra features will be separated into a plib7.h and plib7e.h (e for extra).</div><hr></details></li>
+		<li><details><summary>new DWM updates! - <span class="date">2026-03-26T05:53:21.442Z</span> ago</summary><div class="pre">Hey, this is very personal but my custom build of Sucklesses Dynamic Window Manager [DWM] has gotten some great new updates! Firstly I've fixed the long time issue where ST (suckless terminal) dosn't show up on the titlebar correctly.. this was fixed by patching ST with the title parsing fix patch. I've now completly removed the use of lemonbar and now I'm running a full native DWMBar system! I had to patch status2d with lots of custom code to allow for positioning text in the center and right side of the bottom bar! this allowed me to port my old lemonbar-bar style over to dwmbar, this wasn't too hard as my bar was designed to be modular.. anyway. check it out it you want too..</div><hr></details></li>
 	</ul>
 	<script>
 		console.log ("Hire me!")

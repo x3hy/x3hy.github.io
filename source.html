@@ -17,8 +17,11 @@
 			height:fit-content;
 			max-width: 650px;
 			font-size: 0.9em;
-			margin: 50 40;
+			margin: 50px 40px;
+			box-sizing:border-box;
 			font-family: "Times New Roman", Times, serif;
+			color:white;
+			background:black;
 		}
 		
 		hr {
@@ -26,12 +29,21 @@
 			opacity:0.5;
 		}
 
+		.pre {
+			white-space: pre-line;
+			display:block;
+			border: solid 1px white;
+			background: rgba(0,0,0,0.25);
+			padding: 0px 1ch;
+			font-family:monospace;
+			margin-bottom: 2ch;
+		}
+		
 		/* Single liners */
 		h1 {font-size:3em;}
 		h1, ul, h2, h3, p, section, code, summary {margin:0px;}
 		ul li {list-style-type:none;}
 		ul li a {cursor:pointer;}
-		code {white-space:pre-line;}
 	</style>
 
 	<!-- Only other remote resources: -->
@@ -49,9 +61,9 @@
 	<h1>Lukan Snopovs</h1>
 	<a href="https://github.com/x3hy/">Github</a>::<a href="#journal">Journal</a>::<a href="#projects">Projects</a>
 	<section class="about-me" role="main">
-		<code title="Github README file">
+		<div title="Github README file" class="pre">
 		!PLATE_ABOUTME (about me goes here)
-		</code>
+		</div>
 	</section>
 
 	<ul id="projects" title="Projects">
