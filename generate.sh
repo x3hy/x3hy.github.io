@@ -19,6 +19,6 @@ echo "$new" > index.html
 echo "Loaded README"
 
 # Generate journals
-new=$(plate --template="		<li><details><summary><!--\$title--> - <span class=\"date\"><!--\$time--></span> ago</summary><div class=\"pre\"><!--\$body--></div><hr></details></li>" -i=index.html -p="journal" -J=data/journal.json -L=!PLATE_JOURNAL)
+new=$(plate --template="		<li><details><summary><!--\$title--> - <i class=\"date\"><!--\$time--></i> ago</summary><div class=\"pre\"><!--\$body--></div><hr></details></li>" -i=index.html -p="journal" -J=data/journal.json -L=!PLATE_JOURNAL)
 echo "$new" > index.html
 echo "Loaded journal"
