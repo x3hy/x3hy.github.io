@@ -66,6 +66,11 @@
       "title": "new DWM updates!",
       "body": "Hey, this is very personal but my custom build of Sucklesses Dynamic Window Manager [DWM] has gotten some great new updates! Firstly I've fixed the long time issue where ST (suckless terminal) dosn't show up on the titlebar correctly.. this was fixed by patching ST with the title parsing fix patch. I've now completly removed the use of lemonbar and now I'm running a full native DWMBar system! I had to patch status2d with lots of custom code to allow for positioning text in the center and right side of the bottom bar! this allowed me to port my old lemonbar-bar style over to dwmbar, this wasn't too hard as my bar was designed to be modular.. anyway. check it out it you want too..",
       "time": "2026-03-26T05:53:21.442Z"
+    },
+    {
+      "title": "RE: Is there no such thing as a cheap split-layout keyboard?",
+      "body": "Hi! Guess what I found.. I found a cheap Corne V4.1 on ebay for under 70 dollars! (61.20 to be exact). This was a great find as the pcbs alone cost more then that. This particular Corne has both QMK and VIAL support which is great, it has both RGB and because its the V4.1 it has no screens which I did not like on the Corne V3's.. Its the wired version which I also prefer.\n\nThe entire build costs around $100 (my local currency) but I'm able to sell the board for over double that as there is a very small and concentrated market for Cornes in my country..\n\nHopefully the Corne lives up to its reputation, I've heard they are great for forcing yourself to learn 10-finger-typing and they reduce wrist-strain because of their staggered design.\n\nI've wanted a Corne keyboard for so long and I'm quite happy this showed up! I'll post another comment about how my typing style has changed after using it.\n\nSide-note, I find it quite funny to think about how people use my computer. This is because I use DWM which already is quite keyboard driven, I've made majority of my computer operable through keybinds alone. I switched to DVORAK layout a while ago and that will put a lot of people off this setup and now lastly I'm moving over from a 61 key keyboard (custom RK61) to a 46 key Corne V4.1..",
+      "time": "2026-04-03T05:53:48.367Z"
     }
   ]
 }
