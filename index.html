@@ -171,8 +171,36 @@ mostly full of elitist code.. Lots of the patches used in this build are
 highly customised, I'd not recommend trying to add any new patches as it will
 likely be faster to manually patch it.
 </div></details></li>
-		<li><details><summary><a href="https://github.com/x3hy/otherwise-lib"><span title=Language>(C)</span> <b>otherwise-lib</a></b> - <i>An advanced but small library that introduces a new "otherwise" keyword to C and C++.</i></summary><div class="pre"></div></details></li>
-		<li><details><summary><a href="https://github.com/x3hy/plate"><span title=Language>(C)</span> <b>plate</a></b> - <i>Universal file tem(plate) generator made for parsing JSON into HTML.</i></summary><</details="pre">Plate 1.6.x
+		<li><details><summary><a href="https://github.com/x3hy/node"><span title=Language>(C)</span> <b>node</a></b> - <i>A baisc liked-list memory allocator.</i></summary><div class="pre">node.h (Basic linked-list memory handler)
+
+-----------------------------------------------------------------------------
+This is a small C library that provides a new way to allocate memory, you can
+use this library to allocate memory but you are now able to free all of that
+memory at once. This is similar to a arena allocator in concept.
+
+`node.h` uses a linked list where each node has a `void *` pointer. Each node of
+course has a child node and that node has a child node and so on.. When you
+use `node_alloc()`, the size of memory given will be `malloc()`'d to the nearest
+available node, a pointer to this memory is returned. This means you can use
+`node_malloc()` just like regular `malloc()`.
+
+`node.h` also provides `node_free()` and `node_destroy()`. `node_free` takes a
+`void *` pointer and will locate that memory address in the linked list, when
+its found the memory will be `free()`'d, this node can of course be used
+again, this saves on allocations for new nodes.
+
+And finally `node_destroy()` will recursively free all the nodes and pointers.
+------------------------------------------------------------------------------
+
+Using `node.h` means that you can allocate memory without needing to worry
+about `free()`ing that memory. This is because memory allocated is held in a
+linked list, this means that regardless of where we point the allocated data
+we know where it is held (in the linked list).
+
+Read `example.c` for a basic implementation.
+</div></details></li>
+		<li><details><summary><a href="https://github.com/x3hy/otherwise-lib"><span title=Language>(C)</span> <b>otherwise-lib</a></b> - <i>An advanced but small library that introduces a new "otherwise" keyword to C and C++.</i></summary><</details="pre"></div></details></li>
+		<li><details><summary><a href="https://github.com/x3hy/plate"><span title=Language>(C)</span> <b>plate</a></b> - <i>Universal file tem(plate) generator made for parsing JSON into HTML.</i></summary><div class="pre">Plate 1.6.x
 -------------------------
 Plate is a basic tem(plate) generator for JSON. plate takes in a template and some JSON and will replace special triggers in the template with the values in the json. Plate can iterate through arrays of data and output templates of each part of the data. Plate also takes an input file where you can specifiy a "input trigger" that the template(s) will be written too.
 Plate was designed for generating static websites using data from json files. An example usecase would be a portfoio website that uses the GitHub api to populate its pages.
@@ -235,7 +263,7 @@ Alternativly if you do not have wget, you can use "curl -O <url>" instead.
 --------------------------
 example.c contains quickstart code, please view the documentation link provided at the top of the project if you're stuck.
 </div></details></li>
-		<li><details><summary><a href="https://github.com/x3hy/vim"><span title=Language>(Vim Script)</span> <b>vim</a></b> - <i>My personal vim dot-files, includes ALE, code completions and many other efficiency increasing settings.</i></summary><</details="pre">        -- Vim --
+		<li><details><summary><a href="https://github.com/x3hy/vim"><span title=Language>(Vim Script)</span> <b>vim</a></b> - <i>My personal vim dot-files, includes ALE, code completions and many other efficiency increasing settings.</i></summary><div class="pre">        -- Vim --
 > My personal dot-files <
 
 -------------------------
