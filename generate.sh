@@ -8,7 +8,7 @@ if [ -e index.html ];then
 fi
 
 # Generate projects
-new=$(plate --template="		<li><details><summary><a href=\"<!--\$html_url-->\"><span title="Language">(<!--\$language-->)</span> <b><!--\$name--></a></b> - <i><!--\$description--></i></summary><div class=\"pre\"><!--\$readme_txt--></div></details></li>" -i=source.html -J=data/repo.json -L=!PLATE_PROJECTS -p="data")
+new=$(plate --template="		<li><a href=\"<!--\$html_url-->\"><span title="Language">(<!--\$language-->)</span> <b><!--\$name--></a></b> - <i><!--\$description--></i> - <mark class=\"date\"><!--\$updated_at--></mark></li>" -i=source.html -J=data/repo.json -L=!PLATE_PROJECTS -p="data")
 
 echo "$new" > index.html
 echo "Loaded projects"

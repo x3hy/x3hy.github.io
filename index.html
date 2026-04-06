@@ -79,247 +79,18 @@ View my projects here:
 	</section>
 
 	<ul id="projects" title="Projects">
-		<li><details><summary><a href="https://github.com/x3hy/arr"><span title=Language>(C)</span> <b>arr</a></b> - <i>A basic GNU style tool that runs a command on file change</i></summary><div class="pre">Auto Read-Runner
--------------------
-
-ARR is a basic program that listens for a file change and executes a command when that occurs.
--------------------
-
-arr [OPTIONS]
-OPTIONS:
---command    | command run when file is modifyed
---interval   | interval in seconds the file is checked
---message    | message showen when file is edited
---no-message | disable showing message
---no-command | disable running command
---no-startup | disable file check on script start
--------------------
-
-git clone https://github.com/9jh1/arr
-cd arr
-make
-./arr
-</div></details></li>
-		<li><details><summary><a href="https://github.com/x3hy/blui"><span title=Language>(C)</span> <b>blui</a></b> - <i>Cross-Platform window management API, targeted at TUI, For C and C++.</i></summary><div class="pre">BlUI 1.0.0
---------------------------------
-BLUI is a terminal graphics library for creating interfaces. BLUI is more of
-an API with some extra features than an actual TUI specific library. BLUI is
-just a low-level and basic API for interacting with windows and text elements
-on a screen. Its possible to use BLUI for window management on larger
-projects outside of the terminal!
-
-Features:
-- Header only library.
-- Tiny file size.
-- Completely static allocation (no stdlib.h).
-- Very basic usage and low-level implementation.
-- Optimised for Speed and a markup style.
-- C & C++ support.
-- Cross platform (Windows, Mac and Linux).
-
-BLUI works on a basis of elements and tagging. You can create elements and
-give them a tag/category then you can choose to draw specific tags using
-specific functions.
---------------------------------
-
-How to use:
-To Use BLUI simply include the main "blui.h" file into your project. You
-can download the latest edge version like so:
-
-wget https://raw.githubusercontent.com/x3hy/blui/refs/heads/master/blui.h
-
-Note, if you don't have wget you can use "curl -Os <url>" instead.
-
---------------------------------
-Look into "example.c" which contains a basic example of how BLUI can be used
-for terminal-style interfaces. Keep in mind this is a basic project and will
-not be updated frequently as it is mainly used for my personal projects.
-</div></details></li>
-		<li><details><summary><a href="https://github.com/x3hy/canvas"><span title=Language>(C)</span> <b>canvas</a></b> - <i>This is a dwm patch that implements the "canvas" mode from wh1tepearls vxwm.</i></summary><div class="pre">This is a stock version of dwm that includes the "canvas" mode seen in
-vxwm. vxwm is built on dwm. Generate a patch below, the patch will add
-the canvas mode and show the coordinates of the canvas in the dwmbar.
-
-I've provided a canvas.patch file which you can download to your dwm
-build. To instead generate the patch file from scratch you can run
-the patch.sh file or you can view the contents of it to figure out
-how to generate the patch file.
-
-Once you have the canvas.diff file (either from generating it
-yourself or downloading the pre-made one, you can apply the patch
-as you would any other dwm patch:
-patch -F3 -i canvas.diff
-
-Recompile dwm (don't forget to cat config.def.h > config.h) and it
-should work fine. Check your dwm config.def.h file for the default
-keybinds.
-
-Again, this feature was taken directly from vxwm, which is a dwm fork
-that comes with patch management and a canvas mode, so for more details
-please go and review the code or changes in vxwm:
-https://codeberg.org/wh1tepearl/vxwm
-</div></details></li>
-		<li><details><summary><a href="https://github.com/x3hy/CSC"><span title=Language>(PHP)</span> <b>CSC</a></b> - <i>Level 3 Computer Science files</i></summary><div class="pre">CSC
----------------------------------
-This is a collection of projects over 2026.
-</div></details></li>
-		<li><details><summary><a href="https://github.com/x3hy/dwm"><span title=Language>(C)</span> <b>dwm</a></b> - <i>My personal build of suckless software's Dynamic Window Manager!</i></summary><div class="pre">My DWM setup, this is another "I wish this was unlisted" project, do not
-expect this to be updated frequently.
-
-Look at img/ for some OLD images from when i was on FreeBSD, I've now switched
-over to CRUX Linux and many smaller updates have occured and many many many
-larger backend changes.
-
-This is a very *opinionated* rice. The actual DWM build (./source/dwm) is
-mostly full of elitist code.. Lots of the patches used in this build are
-highly customised, I'd not recommend trying to add any new patches as it will
-likely be faster to manually patch it.
-</div></details></li>
-		<li><details><summary><a href="https://github.com/x3hy/node"><span title=Language>(C)</span> <b>node</a></b> - <i>A basic liked-list memory allocator.</i></summary><div class="pre">node.h (Basic linked-list memory handler)
-
------------------------------------------------------------------------------
-This is a small C library that provides a new way to allocate memory, you can
-use this library to allocate memory but you are now able to free all of that
-memory at once. This is similar to a arena allocator in concept.
-
-`node.h` uses a linked list where each node has a `void *` pointer. Each node of
-course has a child node and that node has a child node and so on.. When you
-use `node_alloc()`, the size of memory given will be `malloc()`'d to the nearest
-available node, a pointer to this memory is returned. This means you can use
-`node_malloc()` just like regular `malloc()`.
-
-`node.h` also provides `node_free()` and `node_destroy()`. `node_free` takes a
-`void *` pointer and will locate that memory address in the linked list, when
-its found the memory will be `free()`'d, this node can of course be used
-again, this saves on allocations for new nodes.
-
-And finally `node_destroy()` will recursively free all the nodes and pointers.
-------------------------------------------------------------------------------
-
-Using `node.h` means that you can allocate memory without needing to worry
-about `free()`ing that memory. This is because memory allocated is held in a
-linked list, this means that regardless of where we point the allocated data
-we know where it is held (in the linked list).
-
-Read `example.c` for a basic implementation.
-</div></details></li>
-		<li><details><summary><a href="https://github.com/x3hy/otherwise-lib"><span title=Language>(C)</span> <b>otherwise-lib</a></b> - <i>An advanced but small library that introduces a new "otherwise" keyword to C and C++.</i></summary><</details="pre"></div></details></li>
-		<li><details><summary><a href="https://github.com/x3hy/plate"><span title=Language>(C)</span> <b>plate</a></b> - <i>Universal file tem(plate) generator made for parsing JSON into HTML.</i></summary><div class="pre">Plate 1.6.x
--------------------------
-Plate is a basic tem(plate) generator for JSON. plate takes in a template and some JSON and will replace special triggers in the template with the values in the json. Plate can iterate through arrays of data and output templates of each part of the data. Plate also takes an input file where you can specifiy a "input trigger" that the template(s) will be written too.
-Plate was designed for generating static websites using data from json files. An example usecase would be a portfoio website that uses the GitHub api to populate its pages.
--------------------------
-
-Options: 
---template    | -t | Enter the template as a string value
---input       | -i | Input file
---input-link  | -L | Set input link, defaults to <!--PLATE-->
---json-file   | -J | Enter json data as a file
---json-string | -j | Use string JSON instead of file
---suffix      | -s | Set the end delimiter for value substitution
---prefix      | -p | Set the start delimiter for value searching
---output-file | -o | Set output file location, defaults to stdout
---json-path   | -p | Set the path for json data, defaults to.
---help        | -h | Display this dialog.
---version     | -v | Show version number.
-
------------------------
-Versioning:
-x.y.z
-x: major version, usually the current re-write
-y: mean version, usually the amount of larger updates.
-z: minor version, the amount of commitments since the last major version.
-
-----------------------
-Building:
-
-To build plate simply run:
-$ make
-
-To install plate, run
-$ sudo make install
-</div></details></li>
-		<li><details><summary><a href="https://github.com/x3hy/plib"><span title=Language>(C)</span> <b>plib</a></b> - <i>A static, header-only library that implements simple argument parsing.</i></summary><div class="pre">PLib 6.1.8
-Documentation : https://github.com/x3hy/plib/wiki
--------------------------
-A basic and minimal C library for parsing arguments.
-
-Features:
-- Header only library 
-- Roughly ~450 lines of code.
-- Completly static allocation.
-- Optimized for user control.
-- Very simple usage and installlation.
-- Extensive error handling
---------------------------
-
-Download/Install: 
-You only require the plib6.h file which you can download locally like so:
-
-Edge: 
-wget https://raw.githubusercontent.com/x3hy/plib/refs/heads/main/plib6.h
-
-Stable:
-wget https://raw.githubusercontent.com/x3hy/plib/refs/tags/6.1.8/plib6.h
-
-Alternativly if you do not have wget, you can use "curl -O <url>" instead.
-
---------------------------
-example.c contains quickstart code, please view the documentation link provided at the top of the project if you're stuck.
-</div></details></li>
-		<li><details><summary><a href="https://github.com/x3hy/vim"><span title=Language>(Vim Script)</span> <b>vim</a></b> - <i>My personal vim dot-files, includes ALE, code completions and many other efficiency increasing settings.</i></summary><div class="pre">        -- Vim --
-> My personal dot-files <
-
--------------------------
-This is my personal configuration of vim. If GitHub had unlisted repositories this would be one. My setup currently has ALE and fast completions, this setup is for performance and efficiency.
-
--------------------------
-Some screenshots are in the ./img folder, the font used is Terminus (TTF)
-</div></details></li>
-		<li><details><summary><a href="https://github.com/x3hy/x3hy"><span title=Language>(NULL)</span> <b>x3hy</a></b> - <i>Hosting for the "about me" on both my github profile and my website!</i></summary><div class="pre">I'm a freelance, low-level developer. I love free (*as in freedom*), open-source software and community driven projects. Some of my favorite software is made by *suckless software* and *GNU*. I value privacy over everything and I despise subscription services to the point where I self-host nearly everything. I love simplicity and performance over style. The modern digital world is a mess, having to navigate surveillance, censorship and the ever increasing use of artificial intelligence. Put the power back in the hands of the people.
- 
-Enough drivel, I have quite a few years of low-level BSD & GNU/Linux experience. My strongest programming language would be C but I've done work in the likes of x86 ASM, Rust, Odin, Python (who hasn't) and the vannila web development trio (css, html and javascript). Do not let my personal website fool you, I am quite capable in the web development field.
-
-Some more information about me: In my free time I like to listen to music, one of my favorite bands is *Armor For Sleep*. Programming is also my hobby and something that I enjoy more than most other things. In my free time (if I'm not coding) you may find me making pizza (my favorite food) or watching Neon Genesis :D.
-
-Sources:
-https://suckless.org/
-https://www.gnu.org/
-https://crux.nu/
-
-View my projects here:
-</div></details></li>
-		<li><details><summary><a href="https://github.com/x3hy/x3hy.github.io"><span title=Language>(HTML)</span> <b>x3hy.github.io</a></b> - <i>File source for my personal portfolio website</i></summary><div class="pre">Personal portfolio generated using my custom template generator.
-(tem)plate, generator: https://github.com/x3hy/plate
-
-For more information view my website here:
-https://x3hy.github.io
-
-This website is set up for automation, on my local machine I can run "make
-update reload push" and a new auto-commit will be pushed with updated data
-from github. 
-
-If you also want to automate your website using plate and python files take a
-look at the files below:
-
-.
-├── data
-│   ├── fetch.py     | Fetches all new github API data.
-│   ├── journal.json | holds the raw journal data.
-│   ├── repo.json    | Holds the repository data from the github API
-│   ├── user.json    | Holds my user information from the github API
-│   └── vim.sh       | lets me create a new journal entry in vim
-├── generate.sh      | Runs plate to generate the final page
-├── index.html       | This is the source.html file with the loaded data
-├── Makefile         | Makefile used for automation of the prior.
-├── README           | This file!
-├── source.html      | Original html file before plate adds data.
-`── src
-    ├── favicon.ico  | Basic website icon (white square)
-    ├── public.js    | Basic javascript that does a few basic formatting fixes
-    └── style.css    | VERY basic stylesheet
-
-3 directories, 15 files
-</div></details></li>
+		<li><a href="https://github.com/x3hy/arr"><span title=Language>(C)</span> <b>arription--></i> - <mark class="date">2026-02-20T10:50:36Z</mark></li>
+		<li><a href="https://github.com/x3hy/blui"><span title=Language>(C)</span> <b>bluiiption--></i> - <mark class="date">2026-03-13T09:32:56Z</mark></li>
+		<li><a href="https://github.com/x3hy/canvas"><span title=Language>(C)</span> <b>canvas</a></b> - <i>This is a dwm patch that implements the "canvas" mode from wh1tepearls vxwm.</i> - <mark class="date">2026-03-23T04:51:51Z</mark></li>
+		<li><a href="https://github.com/x3hy/CSC"><span title=Language>(PHP)</span> <b>CSCiption--></i> - <mark class="date">2026-04-06T12:02:59Z</mark></li>
+		<li><a href="https://github.com/x3hy/dwm"><span title=Language>(C)</span> <b>dwm</a></b> - <i>My personal build of suckless software's Dynamic Window Manager!</i> - <mark class="date">2026-04-06T11:10:27Z</mark></li>
+		<li><a href="https://github.com/x3hy/node"><span title=Language>(C)</span> <b>nodeiption--></i> - <mark class="date">2026-04-03T23:37:26Z</mark></li>
+		<li><a href="https://github.com/x3hy/otherwise-lib"><span title=Language>(C)</span> <b>otherwise-libiption--></i> - <mark class="date">2026-03-12T08:23:12Z</mark></li>
+		<li><a href="https://github.com/x3hy/plate"><span title=Language>(C)</span> <b>plate</a></b> - <i>Universal file tem(plate) generator made for parsing JSON into HTML.</i> - <mark class="date">2026-03-27T12:25:57Z</mark></li>
+		<li><a href="https://github.com/x3hy/plib"><span title=Language>(C)</span> <b>plib</a></b> - <i>A static, header-only library that implements simple argument parsing.</i> - <mark class="date">2026-03-19T09:07:09Z</mark></li>
+		<li><a href="https://github.com/x3hy/vim"><span title=Language>(Vim Script)</span> <b>vimiption--></i> - <mark class="date">2026-04-03T06:59:02Z</mark></li>
+		<li><a href="https://github.com/x3hy/x3hy"><span title=Language>(NULL)</span> <b>x3hyiption--></i> - <mark class="date">2026-04-01T02:10:50Z</mark></li>
+		<li><a href="https://github.com/x3hy/x3hy.github.io"><span title=Language>(HTML)</span> <b>x3hy.github.io</a></b> - <i>File source for my personal portfolio website</i> - <mark class="date">2026-04-06T12:03:13Z</mark></li>
 	</ul>
 
 	<br><hr>
@@ -394,6 +165,7 @@ Hopefully the Corne lives up to its reputation, I've heard they are great for fo
 I've wanted a Corne keyboard for so long and I'm quite happy this showed up! I'll post another comment about how my typing style has changed after using it.
 
 Side-note, I find it quite funny to think about how people use my computer. This is because I use DWM which already is quite keyboard driven, I've made majority of my computer operable through keybinds alone. I switched to DVORAK layout a while ago and that will put a lot of people off this setup and now lastly I'm moving over from a 61 key keyboard (custom RK61) to a 46 key Corne V4.1..</div><hr></details></li>
+		<li><details><summary><b>Plate TODOs</b> - <i class="date">2026-04-06T12:29:34.919Z</i> ago</summary><div class="pre">Hello! If you're reading this then im sure yourve seen the mess above in the projects section, this is due to PLATE bugs that I haven't solved yet. I'm busy with other commitments (school) so I will not be able to attend to these issues, I'm sorry for the inconvenience!</div><hr></details></li>
 	</ul>
 	<script>
 		console.log ("Hire me!")
