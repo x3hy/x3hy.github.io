@@ -207,7 +207,7 @@ Sorry for the state of this page, I had to roll it back to fit the capabilities 
 		function time_since (date)
 		{
 			const fmt = (time, ext) =>
-				{return `${time} ${ext}${(time >= 1) ? "s" : ""}`}
+				{return `${time} ${ext}${(time > 1) ? "s" : ""}`}
 		
 			const old_date = new Date(date);
 			let seconds = Math.floor((new Date() - old_date) / 1000)
