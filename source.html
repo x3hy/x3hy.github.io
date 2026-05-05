@@ -94,7 +94,7 @@
 		
 		function time_since (date)
 		{
-			const fmt = (time, ext) =>
+			const _format = (time, ext) =>
 				{return `${time} ${ext}${(time > 1) ? "s" : ""}`}
 		
 			const old_date = new Date(date);
@@ -102,25 +102,25 @@
 			
 			var interval = seconds / 31536000;
 			if (interval > 1)
-				return fmt(Math.floor(interval), "year");
+				return _format(Math.floor(interval), "year");
 			
 			interval = seconds / 2592000;
 			if (interval > 1)
-				return fmt(Math.floor(interval),"month");
+				return _format(Math.floor(interval),"month");
 			
 			interval = seconds / 86400;
 			if (interval > 1)
-				return fmt(Math.floor(interval),"day");
+				return _format(Math.floor(interval),"day");
 			
 			interval = seconds / 3600;
 			if (interval > 1)
-				return fmt(Math.floor(interval), "hour");
+				return _format(Math.floor(interval), "hour");
 			
 			interval = seconds / 60;
 			if (interval > 1)
-				return fmt(Math.floor(interval), "minute");
+				return _format(Math.floor(interval), "minute");
 			
-			return fmt(Math.floor(seconds), "second");
+			return _format(Math.floor(seconds), "second");
 		}
 		
 		document.addEventListener('DOMContentLoaded', () => {
