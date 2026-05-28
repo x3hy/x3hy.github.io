@@ -15,16 +15,16 @@
 		/* Basic body */
 		body {
 			height:fit-content;
-			max-width: 650px;
 			font-size: 0.9em;
 			margin: 50px 40px;
 			box-sizing:border-box;
 			font-family: "Times New Roman", Times, serif;
-			color:white;
-			background:black;
+			color:black;
+			background:white;
 		}
 		
 		hr {
+			margin-left:0px;
 			border-bottom:1px solid white;
 			opacity:0.5;
 		}
@@ -32,11 +32,6 @@
 		.pre {
 			white-space: pre-line;
 			display:block;
-			border: solid 1px white;
-			background: rgba(0,0,0,0.25);
-			padding: 0px 1ch;
-			font-family:monospace;
-			margin-bottom: 2ch;
 		}
 		
 		/* Single liners */
@@ -44,6 +39,7 @@
 		h1, ul, h2, h3, p, section, code, summary {margin:0px;}
 		ul li {list-style-type:none;}
 		ul li a {cursor:pointer;}
+		.pre-size, hr {max-width:80ch;background;red;}
 	</style>
 
 	<!-- Only other remote resources: -->
@@ -57,11 +53,30 @@
 	</em>
 
 	<hr>
-	<br>
+	<br><br>
 	<h1>Lukan Snopovs</h1>
-	<a href="https://github.com/x3hy/">Github</a>::<a href="#journal">Journal</a>::<a href="#projects">Projects</a>
-	<section class="about-me" role="main">
-		<div title="Github README file" class="pre">
+	<ul id="projects" title="Projects">
+		<li><a href="https://github.com/x3hy/arglib"><span title=Language>(C)</span> <b>arglib</a></b> - <i>TINY argument parser. minimal dependancies, completley static.</i></li>
+		<li><a href="https://github.com/x3hy/arr"><span title=Language>(C)</span> <b>arr</a></b> - <i>A basic GNU style tool that runs a command on file change</i></li>
+		<li><a href="https://github.com/x3hy/blui"><span title=Language>(C)</span> <b>blui</a></b> - <i>Cross-Platform window management API, targeted at TUI, For C and C++.</i></li>
+		<li><a href="https://github.com/x3hy/canvas"><span title=Language>(C)</span> <b>canvas</a></b> - <i>This is a dwm patch that implements the "canvas" mode from wh1tepearls vxwm.</i></li>
+		<li><a href="https://github.com/x3hy/CSC"><span title=Language>(PHP)</span> <b>CSC</a></b> - <i>Level 3 Computer Science files</i></li>
+		<li><a href="https://github.com/x3hy/dwm"><span title=Language>(C)</span> <b>dwm</a></b> - <i>My personal build of suckless software's Dynamic Window Manager!</i></li>
+		<li><a href="https://github.com/x3hy/ebool"><span title=Language>(C)</span> <b>ebool</a></b> - <i>A tiny library that allows access to all 8 bits of a boolean</i></li>
+		<li><a href="https://github.com/x3hy/node"><span title=Language>(C)</span> <b>node</a></b> - <i>A minimal linked-list memory handler.</i></li>
+		<li><a href="https://github.com/x3hy/otherwise-lib"><span title=Language>(C)</span> <b>otherwise-lib</a></b> - <i>An advanced but small library that introduces a new "otherwise" keyword to C and C++.</i></li>
+		<li><a href="https://github.com/x3hy/plate"><span title=Language>(C)</span> <b>plate</a></b> - <i>Universal file tem(plate) generator made for parsing JSON into HTML.</i></li>
+		<li><a href="https://github.com/x3hy/plib"><span title=Language>(C)</span> <b>plib</a></b> - <i>A static, header-only library that implements simple argument parsing.</i></li>
+		<li><a href="https://github.com/x3hy/pos"><span title=Language>(Assembly)</span> <b>pos</a></b> - <i>A small hobby OS in X86 ASM</i></li>
+		<li><a href="https://github.com/x3hy/vim"><span title=Language>(Vim Script)</span> <b>vim</a></b> - <i>My personal vim dot-files, includes ALE, code completions and many other efficiency increasing settings.</i></li>
+		<li><a href="https://github.com/x3hy/x3hy"><span title=Language>(NULL)</span> <b>x3hy</a></b> - <i>Hosting for the "about me" on both my github profile and my website!</i></li>
+		<li><a href="https://github.com/x3hy/x3hy.github.io"><span title=Language>(HTML)</span> <b>x3hy.github.io</a></b> - <i>File source for my personal portfolio website</i></li>
+	</ul>
+	<br><br>
+	<hr>
+	<section class="pre-size" role="main">
+		<h2>About me & Contact information</h2>
+		<div class="pre">
 I'm a freelance, low-level developer. I love free (*as in freedom*), open-source software and community driven projects. Some of my favorite software is made by *suckless software* and *GNU*. I value privacy over everything and I despise subscription services to the point where I self-host nearly everything. I love simplicity and performance over style. The modern digital world is a mess, having to navigate surveillance, censorship and the ever increasing use of artificial intelligence. Put the power back in the hands of the people.
  
 Enough drivel, I have many years of low-level BSD & GNU/Linux experience. My strongest programming language would be C but I've done work in the likes of x86 ASM, Rust, Bash & Python (who hasn't) and the vannila web development trio (CSS, HTML and JavaScript). Do not let my personal website fool you, I am quite capable in the modern web development field. I have experience in most branches of computer science, I have some heavy knowledge of networking and bare-metal hardware coding principles.
@@ -73,29 +88,9 @@ https://suckless.org/
 https://www.gnu.org/
 https://crux.nu/
 
-View my projects here:
-
 		</div>
-	</section>
-
-	<ul id="projects" title="Projects">
-		<li><a href="https://github.com/x3hy/arr"><span title=Language>(C)</span> <b>arr</a></b> - <i>A basic GNU style tool that runs a command on file change</i></li>
-		<li><a href="https://github.com/x3hy/blui"><span title=Language>(C)</span> <b>blui</a></b> - <i>Cross-Platform window management API, targeted at TUI, For C and C++.</i></li>
-		<li><a href="https://github.com/x3hy/canvas"><span title=Language>(C)</span> <b>canvas</a></b> - <i>This is a dwm patch that implements the "canvas" mode from wh1tepearls vxwm.</i></li>
-		<li><a href="https://github.com/x3hy/CSC"><span title=Language>(PHP)</span> <b>CSC</a></b> - <i>Level 3 Computer Science files</i></li>
-		<li><a href="https://github.com/x3hy/dwm"><span title=Language>(C)</span> <b>dwm</a></b> - <i>My personal build of suckless software's Dynamic Window Manager!</i></li>
-		<li><a href="https://github.com/x3hy/node"><span title=Language>(C)</span> <b>node</a></b> - <i>A minimal linked-list memory handler.</i></li>
-		<li><a href="https://github.com/x3hy/otherwise-lib"><span title=Language>(C)</span> <b>otherwise-lib</a></b> - <i>An advanced but small library that introduces a new "otherwise" keyword to C and C++.</i></li>
-		<li><a href="https://github.com/x3hy/plate"><span title=Language>(C)</span> <b>plate</a></b> - <i>Universal file tem(plate) generator made for parsing JSON into HTML.</i></li>
-		<li><a href="https://github.com/x3hy/plib"><span title=Language>(C)</span> <b>plib</a></b> - <i>A static, header-only library that implements simple argument parsing.</i></li>
-		<li><a href="https://github.com/x3hy/vim"><span title=Language>(Vim Script)</span> <b>vim</a></b> - <i>My personal vim dot-files, includes ALE, code completions and many other efficiency increasing settings.</i></li>
-		<li><a href="https://github.com/x3hy/x3hy"><span title=Language>(NULL)</span> <b>x3hy</a></b> - <i>Hosting for the "about me" on both my github profile and my website!</i></li>
-		<li><a href="https://github.com/x3hy/x3hy.github.io"><span title=Language>(HTML)</span> <b>x3hy.github.io</a></b> - <i>File source for my personal portfolio website</i></li>
-	</ul>
-
-	<br><hr>
-	<h2>Contact</h2>
-	<p> I'm avaiable for <b>discussion, review or feedback</b>.
+		<hr>
+		I'm avaiable for <b>discussion, review or feedback</b>.
 		If you are looking to hire me for a task, email me and use the keyword
 		<b>job</b> in the subject line. You can use the
 		<a href="mailto:tkf.x3os@gmail.com">tkf.x1os@gmail.com</a>,
@@ -103,8 +98,8 @@ View my projects here:
 		you can use <a href="mailto:x3hy@protonmail.com">x3hy@protonmail.com</a>
 		which forwards over SMS to my personal mobile phone.
 		<br><br>
-		Other than emails you can contact me through <a href="https://matrix.to/#/@3hy:matrix.org">Matrix</a>.
-	</p>
+		Other than email, you can contact me through <a href="https://matrix.to/#/@3hy:matrix.org">Matrix</a>.
+	</section>
 
 	<br><hr>
 	<h2>Journal</h2>
@@ -206,7 +201,7 @@ Sorry for the state of this page, I had to roll it back to fit the capabilities 
 		
 		function time_since (date)
 		{
-			const fmt = (time, ext) =>
+			const _format = (time, ext) =>
 				{return `${time} ${ext}${(time > 1) ? "s" : ""}`}
 		
 			const old_date = new Date(date);
@@ -214,50 +209,48 @@ Sorry for the state of this page, I had to roll it back to fit the capabilities 
 			
 			var interval = seconds / 31536000;
 			if (interval > 1)
-				return fmt(Math.floor(interval), "year");
+				return _format(Math.floor(interval), "year");
 			
 			interval = seconds / 2592000;
 			if (interval > 1)
-				return fmt(Math.floor(interval),"month");
+				return _format(Math.floor(interval),"month");
 			
 			interval = seconds / 86400;
 			if (interval > 1)
-				return fmt(Math.floor(interval),"day");
+				return _format(Math.floor(interval),"day");
 			
 			interval = seconds / 3600;
 			if (interval > 1)
-				return fmt(Math.floor(interval), "hour");
+				return _format(Math.floor(interval), "hour");
 			
 			interval = seconds / 60;
 			if (interval > 1)
-				return fmt(Math.floor(interval), "minute");
+				return _format(Math.floor(interval), "minute");
 			
-			return fmt(Math.floor(seconds), "second");
+			return _format(Math.floor(seconds), "second");
 		}
 		
+		// Remove annoying trailing newlines..
 		document.addEventListener('DOMContentLoaded', () => {
-			document.querySelectorAll('pre, code, .code, .highlight, .sourceCode').forEach(el => {
+			document.querySelectorAll('.pre').forEach(el => {
 				// Loop through each character and collect lines
 				const text = el.textContent;
 				const lines = [];
 				let currentLine = "";
 				for (let i = 0; i < text.length; i++) {
-				  const char = text.charAt(i);
-				  const charCode = char.charCodeAt(0);
-				
-				  if (charCode === 10 || charCode === 13) {
-				    if (currentLine) {
-				      lines.push(currentLine); // Add the current line to the array
-				    }
-				    currentLine = ""; // Reset current line
-				  } else {
-				    currentLine += char; // Add the character to the current line
-				  }
+					const char = text.charAt(i);
+					const charCode = char.charCodeAt(0);
+					
+					if (charCode === 10 || charCode === 13) {
+						if (currentLine)
+							lines.push(currentLine); // Add the current line to the array
+						currentLine = ""; // Reset current line
+					} else
+						currentLine += char; // Add the character to the current line
 				}
 				
-				if (currentLine) {
-				  lines.push(currentLine); // Push the last line
-				}
+				if (currentLine)
+					lines.push(currentLine); // Push the last line
 				
 				let start = 0;
 				while (start < lines.length && lines[start].trim() === '')
@@ -273,10 +266,11 @@ Sorry for the state of this page, I had to roll it back to fit the capabilities 
 				} else el.textContent = '';
 			});
 		
-			document.querySelectorAll("code").forEach(element => {
+			document.querySelectorAll(".pre").forEach(element => {
 				let content = element.innerHTML;
 				let italic_count = 0;
 				let bold_bold    = 0;
+
 				for (let i = 0; i < content.length; i++) {
 					let letter = content[i];
 			
@@ -307,7 +301,7 @@ Sorry for the state of this page, I had to roll it back to fit the capabilities 
 					  })
 		
 					line = words.join(' ') + String.fromCharCode(10);
-					if (line.startsWith("#"))
+					if (line.startsWith("["))
 						line = `<mark>${line}</mark>`
 		
 					lines[line_index] = line;

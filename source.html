@@ -15,16 +15,16 @@
 		/* Basic body */
 		body {
 			height:fit-content;
-			max-width: 650px;
 			font-size: 0.9em;
 			margin: 50px 40px;
 			box-sizing:border-box;
 			font-family: "Times New Roman", Times, serif;
-			color:white;
-			background:black;
+			color:black;
+			background:white;
 		}
 		
 		hr {
+			margin-left:0px;
 			border-bottom:1px solid white;
 			opacity:0.5;
 		}
@@ -32,11 +32,6 @@
 		.pre {
 			white-space: pre-line;
 			display:block;
-			border: solid 1px white;
-			background: rgba(0,0,0,0.25);
-			padding: 0px 1ch;
-			font-family:monospace;
-			margin-bottom: 2ch;
 		}
 		
 		/* Single liners */
@@ -44,6 +39,7 @@
 		h1, ul, h2, h3, p, section, code, summary {margin:0px;}
 		ul li {list-style-type:none;}
 		ul li a {cursor:pointer;}
+		.pre-size, hr {max-width:80ch;background;red;}
 	</style>
 
 	<!-- Only other remote resources: -->
@@ -57,22 +53,20 @@
 	</em>
 
 	<hr>
-	<br>
+	<br><br>
 	<h1>Lukan Snopovs</h1>
-	<a href="https://github.com/x3hy/">Github</a>::<a href="#journal">Journal</a>::<a href="#projects">Projects</a>
-	<section class="about-me" role="main">
-		<div title="Github README file" class="pre">
-		!PLATE_ABOUTME (about me goes here)
-		</div>
-	</section>
-
 	<ul id="projects" title="Projects">
 		!PLATE_PROJECTS (projects go here)
 	</ul>
-
-	<br><hr>
-	<h2>Contact</h2>
-	<p> I'm avaiable for <b>discussion, review or feedback</b>.
+	<br><br>
+	<hr>
+	<section class="pre-size" role="main">
+		<h2>About me & Contact information</h2>
+		<div class="pre">
+			!PLATE_ABOUTME (about me goes here)
+		</div>
+		<hr>
+		I'm avaiable for <b>discussion, review or feedback</b>.
 		If you are looking to hire me for a task, email me and use the keyword
 		<b>job</b> in the subject line. You can use the
 		<a href="mailto:tkf.x3os@gmail.com">tkf.x1os@gmail.com</a>,
@@ -80,8 +74,8 @@
 		you can use <a href="mailto:x3hy@protonmail.com">x3hy@protonmail.com</a>
 		which forwards over SMS to my personal mobile phone.
 		<br><br>
-		Other than emails you can contact me through <a href="https://matrix.to/#/@3hy:matrix.org">Matrix</a>.
-	</p>
+		Other than email, you can contact me through <a href="https://matrix.to/#/@3hy:matrix.org">Matrix</a>.
+	</section>
 
 	<br><hr>
 	<h2>Journal</h2>
@@ -123,29 +117,27 @@
 			return _format(Math.floor(seconds), "second");
 		}
 		
+		// Remove annoying trailing newlines..
 		document.addEventListener('DOMContentLoaded', () => {
-			document.querySelectorAll('pre, code, .code, .highlight, .sourceCode').forEach(el => {
+			document.querySelectorAll('.pre').forEach(el => {
 				// Loop through each character and collect lines
 				const text = el.textContent;
 				const lines = [];
 				let currentLine = "";
 				for (let i = 0; i < text.length; i++) {
-				  const char = text.charAt(i);
-				  const charCode = char.charCodeAt(0);
-				
-				  if (charCode === 10 || charCode === 13) {
-				    if (currentLine) {
-				      lines.push(currentLine); // Add the current line to the array
-				    }
-				    currentLine = ""; // Reset current line
-				  } else {
-				    currentLine += char; // Add the character to the current line
-				  }
+					const char = text.charAt(i);
+					const charCode = char.charCodeAt(0);
+					
+					if (charCode === 10 || charCode === 13) {
+						if (currentLine)
+							lines.push(currentLine); // Add the current line to the array
+						currentLine = ""; // Reset current line
+					} else
+						currentLine += char; // Add the character to the current line
 				}
 				
-				if (currentLine) {
-				  lines.push(currentLine); // Push the last line
-				}
+				if (currentLine)
+					lines.push(currentLine); // Push the last line
 				
 				let start = 0;
 				while (start < lines.length && lines[start].trim() === '')
@@ -161,10 +153,11 @@
 				} else el.textContent = '';
 			});
 		
-			document.querySelectorAll("code").forEach(element => {
+			document.querySelectorAll(".pre").forEach(element => {
 				let content = element.innerHTML;
 				let italic_count = 0;
 				let bold_bold    = 0;
+
 				for (let i = 0; i < content.length; i++) {
 					let letter = content[i];
 			
@@ -195,7 +188,7 @@
 					  })
 		
 					line = words.join(' ') + String.fromCharCode(10);
-					if (line.startsWith("#"))
+					if (line.startsWith("["))
 						line = `<mark>${line}</mark>`
 		
 					lines[line_index] = line;
