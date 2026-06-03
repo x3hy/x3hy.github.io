@@ -1,4 +1,4 @@
-#!/bin/mksh
+#!/bin/sh
 # Generate website using data statically
 #
 
