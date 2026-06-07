@@ -10,7 +10,7 @@ fi
 set -xe
 
 # Generate projects
-new=$(plate --template="<tr><td><a href=\"<!--\$html_url-->\"><span title="Language"></span> <b><!--\$name--></a></b></td><td><i><!--\$description--></i></td></tr>" -i=source.html -J=data/repo.json -L=!PLATE_PROJECTS -p="data")
+new=$(plate --template="<tr><td><a href=\"<!--\$html_url-->\"><span title="Language"></span> <b><!--\$name--></b></a></td><td><!--\$description--></td></tr>" -i=source.html -J=data/repo.json -L=!PLATE_PROJECTS -p="data")
 
 echo "$new" > index.html
 echo "Loaded projects"
