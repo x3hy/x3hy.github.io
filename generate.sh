@@ -7,6 +7,8 @@ if [ -e index.html ];then
 	rm index.html
 fi
 
+set -xe
+
 # Generate projects
 new=$(plate --template="<li><a href=\"<!--\$html_url-->\"><span title="Language"></span> <b><!--\$name--></a></b> - <i><!--\$description--></i></li>" -i=source.html -J=data/repo.json -L=!PLATE_PROJECTS -p="data")
 
