@@ -86,6 +86,11 @@
       "title": "Updates on projects",
       "body": "Due to large school projects I've been unable to work on any personal projects, I do intend on updating my website using a PHP backend. maybe a new markdown system for the posts on this page. I'm not sure!\n\nI'll update PLATE in a few weeks. It needs a new rebuild..\n\nSorry for the state of this page, I had to roll it back to fit the capabilities of Plate.",
       "time": "2026-05-05T00:11:20.775Z"
+    },
+    {
+      "title": "Update on Corne V4.1",
+      "body": "\nIt came with VIAL out of the box, I've created a new repo \"crkbd_qmk\" that has a new and improved QMK implementation of my setup. I however have had a small incident with a hardware issue. The corne keyboard does not handle hotplugging well. Whist I was flashing QMK firmware, I must have accidentally pulled out the connection TRS/TRRS cable while the board was still powered, this has lead to irreversable MCU RP2040 damage. This cannot be fixed by me so I've bought another Corne V4.1 PCB..\n\nThis issue is not a undefined behavior equals broken board issue, what I mean by this is that; if you treat the keyboard well and you're careful around known issues (removing connection cable) then the board will last a long time..",
+      "time": "2026-06-07T23:01:41.331Z"
     }
   ]
 }
