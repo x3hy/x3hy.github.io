@@ -43,7 +43,12 @@
 		ul li a {cursor:pointer;}
 		.pre-size, hr {max-width:90ch;}
 
-		tr > :first-child {text-align:right;}
+		tr > :first-child {
+			text-align:right;
+			border-right: white 1px solid;
+			padding-right:1ch;
+		}
+		table tr:nth-child(odd) {background: rgba(255,255,255,0.1)}
 	</style>
 
 	<!-- Only other remote resources: -->
