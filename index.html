@@ -209,6 +209,17 @@ Sorry for the state of this page, I had to roll it back to fit the capabilities 
 It came with VIAL out of the box, I've created a new repo "crkbd_qmk" that has a new and improved QMK implementation of my setup. I however have had a small incident with a hardware issue. The corne keyboard does not handle hotplugging well. Whist I was flashing QMK firmware, I must have accidentally pulled out the connection TRS/TRRS cable while the board was still powered, this has lead to irreversable MCU RP2040 damage. This cannot be fixed by me so I've bought another Corne V4.1 PCB..
 
 This issue is not a undefined behavior equals broken board issue, what I mean by this is that; if you treat the keyboard well and you're careful around known issues (removing connection cable) then the board will last a long time..</div><hr></details></li>
+		<li><details><summary><b>I made a IRC-like server</b> - <i class="date">2026-06-11T22:52:11.988Z</i> ago</summary><div class="pre">Over the last two days I have been writing a custom relay-like server for fun. My server is multi-threaded and allows for multiple clients to connect to the server. My server has just two endpoints, one for posting a message and another for streaming messages sent to the server. This server is slightly different to an IRC server, my server uses a set-size backlog that holds onto a certain amount of the last sent messages, this means that when a client connects to the server stream, the last 10 messages can be displayed. IRC does not do this and usually has a temporary queue for managing multiple messages sent at the same time.
+
+As long as messages sent to the server abide by the size limit, the server does not change or modify messages at all, this was intentional as its up the CLIENT to handle how connections occur. You can view the files for this project under TRCS, above, in the projects section of this page.
+
+Included in the repo are a few scripts that let you test the server in plaintext, read the README file for information about this.
+
+---
+
+Along with writing the entire server (its written in ANSI C99), I've started writing a E2E client using the Fernet cryptography library from python. I've started experimenting with Cython which allows trans-interpretation from Python to C. So with the Fernet code (client/fernet.pyx) being only a few lines, I've decided to try and make a fully working client in under 100 LOC (lines of code).
+
+Thank you for reading, check out the project if youre interested, email me at the contact options above if you have any questions.</div><hr></details></li>
 		</ul>
 	</section>
 	<script>
