@@ -1,31 +1,3 @@
-Personal portfolio generated using my custom template generator.
-(tem)plate, generator: https://github.com/x3hy/plate
 
 For more information view my website here:
 https://x3hy.github.io
-
-This website is set up for automation, on my local machine I can run "make
-update reload push" and a new auto-commit will be pushed with updated data
-from github. 
-
-If you also want to automate your website using plate and python files take a
-look at the files below:
-
-.
-├── data
-│   ├── fetch.py     | Fetches all new github API data.
-│   ├── journal.json | holds the raw journal data.
-│   ├── repo.json    | Holds the repository data from the github API
-│   ├── user.json    | Holds my user information from the github API
-│   └── vim.sh       | lets me create a new journal entry in vim
-├── generate.sh      | Runs plate to generate the final page
-├── index.html       | This is the source.html file with the loaded data
-├── Makefile         | Makefile used for automation of the prior.
-├── README           | This file!
-├── source.html      | Original html file before plate adds data.
-`── src
-    ├── favicon.ico  | Basic website icon (white square)
-    ├── public.js    | Basic javascript that does a few basic formatting fixes
-    └── style.css    | VERY basic stylesheet
-
-3 directories, 15 files
