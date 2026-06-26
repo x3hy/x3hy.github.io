@@ -1,0 +1,45 @@
+#!/usr/bin/python3
+# Fetches the json data from github
+
+import json
+from urllib.request import urlopen
+
+GH_USER="x3hy"
+USER_DAT_FILE="user.json"
+REPO_DAT_FILE="repo.json"
+
+# fetch a url and return its json data 
+def fetch (url: str) -> str:
+    out= str ("")
+    if len (url):
+        try:
+            with urlopen (url) as data:
+                out = data.read().decode()
+        except Exception as err:
+            print (f"ERROR: {err}: {url}")
+            if "403" in str(err):
+                print ("Fatal error (403 rate limit reached)")
+                exit(1)
+    return out
+
+# Fetch url and convert to json
+def fetch_json (url: str) -> str:
+    return json.loads (fetch (url))
+
+user_data = [fetch_json (f"https://api.github.com/users/{GH_USER}")]
+user_data[0]["followers_data"] = fetch_json (user_data[0]["followers_url"])
+user_data[0]["readme_txt"] = fetch(f"https://raw.githubusercontent.com/{GH_USER}/{GH_USER}/refs/heads/main/README")
+
+with open (USER_DAT_FILE, 'w') as f:
+    json.dump (user_data, f, indent=4)
+
+# Fetch repo data ( along with README(s) )
+repo_data = fetch_json (user_data[0]["repos_url"])
+
+for repo in repo_data:
+    repo["tags_json"] = fetch_json (repo["tags_url"])
+
+with open (REPO_DAT_FILE, 'w') as f:
+    json.dump (repo_data, f, indent=4)
+
+exit(0)

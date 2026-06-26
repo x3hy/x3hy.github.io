@@ -1,0 +1,46 @@
+#!/bin/sh
+# Loads data onto page
+
+# Is $1 installed on system
+isinst(){
+	local com="$1"
+	if command -v "$com" >/dev/null 2>&1; then
+		return 0;
+	fi
+	return 1;
+}
+
+# Wrapper of isinst
+isreq(){
+	local com="$1"
+	if ! isinst "$com"; then
+		echo "Install $com"
+		exit 1;
+	fi
+}
+
+# Check for requirements
+isreq "plate"
+
+# Load projects to page
+plate -i="source.html" \
+	-I="data/repo.json" \
+	-t="PLATE_PROJECTS" \
+	-o="index_p.html" \
+	-T='<tr><td><p><a href="<!--$html_url-->"><!--$name--></a></td> <td><i><!--$description--></i></td></tr></p>'
+
+# Load the journal entries
+plate -i="index_p.html" \
+	-I="data/journal.json" \
+	-t="PLATE_JOURNAL" \
+	-o="index_j.html" \
+	-T='<li><details><summary><b><!--$title--></b> <i class="date"><!--$time--> ago</i></summary><!--$body--><hr></details></li>'
+
+plate -i="index_j.html" \
+	-I="data/user.json" \
+	-t="PLATE_ABOUTME" \
+	-o="index.html" \
+	-T='<!--$readme_txt-->'
+
+# Remove tmp files (plate has no daisy chaining)
+rm index_p.html index_j.html

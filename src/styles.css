@@ -1,0 +1,74 @@
+/* Terminus TTF Font Family */
+@font-face {
+	font-family: 'Terminus TTF';
+	src: url('font/TerminusTTF-4.49.3.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Terminus TTF';
+	src: url('font/TerminusTTF-Bold-4.49.3.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Terminus TTF';
+	src: url('font/TerminusTTF-Italic-4.49.3.ttf') format('truetype');
+	font-weight: normal;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Terminus TTF';
+	src: url('font/TerminusTTF-Bold-Italic-4.49.3.ttf') format('truetype');
+	font-weight: bold;
+	font-style: italic;
+	font-display: swap;
+}
+
+html, body {
+	background:#181a1b !important;
+}
+
+/* Basic body */
+body {
+	height:fit-content;
+	font-size: 0.9em;
+	margin: 50px 40px;
+	box-sizing:border-box;
+	font-family: "Terminus TTF", monospace;
+	color:white;
+}
+
+hr {
+	margin-left:0px;
+	border-bottom:1px solid white;
+	opacity:0.5;
+}
+
+.pre {
+	white-space: pre-line;
+	display:block;
+}
+
+tr > :first-child {
+	text-align:right;
+	border-right: white 1px solid;
+	padding-right:1ch;
+}
+
+/* Single liners */
+h1 {font-size:3em;}
+h1, ul, h2, h3, p, section, code, summary {margin:0px;}
+ul li {list-style-type:none;}
+ul li a {cursor:pointer;}
+.pre-size, hr {max-width:90ch;}
+a { color: aqua }
+table tr:nth-child(odd) {background: rgba(255,255,255,0.05)}
+.date {opacity: 0}
+
