@@ -36,6 +36,7 @@ plate -i="index_p.html" \
 	-o="index_j.html" \
 	-T='<li><details><summary><b><!--$title--></b> <i class="date"><!--$time--> ago</i></summary><!--$body--><hr></details></li>'
 
+# Load README to page
 plate -i="index_j.html" \
 	-I="data/user.json" \
 	-t="PLATE_ABOUTME" \
