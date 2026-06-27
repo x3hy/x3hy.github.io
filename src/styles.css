@@ -76,7 +76,7 @@ a { color: aqua }
 /* Mobile styles (basic) */
 @media (orientation: portrait){
 	section {max-width: 100%}
-	body {font-size: 0.5em}
+	body {font-size: 0.8em}
 	td {border-bottom: solid 1px white}
 	table tr:nth-child(odd){background: rgba(255, 255, 255, 0.3)}
 }
