@@ -51,3 +51,8 @@ plate -I="$tmp_json" \
     -o="pages/$post_uuid.html"
 
 echo "Generated: pages/$post_uuid.html"
+
+# After page generation we can remove the body
+# from the json file
+grep --include="*" '^[[:space:]]*"body"[[:space:]]*:' -v journal.json > "$tmp_json"
+mv "$tmp_json" journal.json
