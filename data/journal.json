@@ -10,5 +10,11 @@
     "body": "TRCS is my low-level cross-platform semi-relay server! <a href=\"https://github.com/x3hy/trcs\">Check it out</a>!\n<br>\n<h2><i>Thanks!</i><h2>",
     "time": "2026-06-27T08:03:48.479Z",
     "uuid": "4a7232b3-7568-4fc9-95f7-d3c3acf337aa"
+  },
+  {
+    "title": "Updated DWM photos",
+    "body": "I've been using DWM for a while. I've been using github for hosting (x3hy/dwm), Finally I got around to adding some images to the repo. My dwm config is fully intergrated with the hellwal color generator which allows my system to change themes based off of the wallpaper coloring. Currently I have hellwal set in oposite colors which gives a complementary set of colors to the background, I think this works quite well. Here are two screenshots showing two different wallpapers:\n<img src=\"https://github.com/x3hy/dwm/blob/master/img/1.png?raw=true\">\n<img src=\"https://github.com/x3hy/dwm/blob/master/img/2.png?raw=true\">\n<sub>Check out the <a href=\"https://github.com/x3hy/dwm\">full repo here</a>.</sub>\n<h2>Thanks for reading!</h2>",
+    "time": "2026-06-27T11:52:55.991Z",
+    "uuid": "0e01aef2-9c61-428f-b2df-9a970a7667ef"
   }
 ]
