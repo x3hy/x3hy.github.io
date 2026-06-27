@@ -76,10 +76,22 @@ a { color: aqua }
 /* Mobile styles (basic) */
 @media (orientation: portrait){
 	section {max-width: 100%}
-	td {border-bottom: solid 1px white}
 	table tr:nth-child(odd){background: rgba(255, 255, 255, 0.3)}
 	body {
 		font-size: 0.7em;
 		margin: 25px 20px;
 	}
+
+	table tr {
+		td {all:unset}
+		tr {border: none}
+		display:flex;
+	}
+
+	tr > :first-child {
+		all:unset;
+		margin-right:1ch;
+	}
+
+	#projects {padding:20px}
 }
