@@ -45,7 +45,7 @@ fi
 mkdir -p pages
 
 plate -I="$tmp_json" \
-    -T='<h1><!--$title--></h1><sub>Posted <span class="date"> ago<!--$time--></span></sub><br><hr><p><div class="pre"><!--$body--></div></p>' \
+    -T='<h1><!--$title--></h1><sub>Posted <span class="date"><!--$time--></span> ago</sub><br><hr><p><div class="pre"><!--$body--></div></p>' \
     -i="post.html" \
 	-t="PLATE_BODY" \
     -o="pages/$post_uuid.html"
