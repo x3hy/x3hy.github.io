@@ -31,9 +31,6 @@
 	font-display: swap;
 }
 
-html, body {
-	background:#181a1b !important;
-}
 
 /* Basic body */
 body {
@@ -63,13 +60,21 @@ tr > :first-child {
 }
 
 /* Single liners */
-h1 {font-size:3em;}
-h1, ul, h2, h3, p, section, code, summary {margin:0px;}
-ul li {list-style-type:none;}
-ul li a {cursor:pointer;}
-.pre-size, hr {max-width:90ch;}
-a { color: aqua }
 table tr:nth-child(odd) {background: rgba(255,255,255,0.05)}
+h1, ul, h2, h3, p, section, code, summary {margin:0px}
+html, body {background:#181a1b !important;}
+ul li {list-style-type:none}
+section {max-width:600px}
+ul li a {cursor:pointer}
+h1 {font-size:3em}
 .date {opacity: 0}
+a { color: aqua }
 
 
+/* Mobile styles (basic) */
+@media (orientation: portrait){
+	section {max-width: 100%}
+	body {font-size: 0.5em}
+	td {border-bottom: solid 1px white}
+	table tr:nth-child(odd){background: rgba(255, 255, 255, 0.3)}
+}
