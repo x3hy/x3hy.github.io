@@ -78,10 +78,8 @@ a { color: aqua }
 	section {max-width: 100%}
 	td {border-bottom: solid 1px white}
 	table tr:nth-child(odd){background: rgba(255, 255, 255, 0.3)}
-
-	/* Half of desktop sizes */
 	body {
-		font-size: 0.5em;
+		font-size: 0.7em;
 		margin: 25px 20px;
 	}
 }
