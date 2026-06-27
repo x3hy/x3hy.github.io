@@ -62,6 +62,7 @@ tr > :first-child {
 /* Single liners */
 table tr:nth-child(odd) {background: rgba(255,255,255,0.05)}
 h1, ul, h2, h3, p, section, code, summary {margin:0px}
+button {font-family: "Terminus TTF", monospace}
 html, body {background:#181a1b !important;}
 ul li {list-style-type:none}
 section {max-width:600px}
