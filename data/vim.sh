@@ -1,32 +1,53 @@
 #!/bin/sh
+set -e  # Exit on any error
+
 tmp=$(mktemp)
+tmp_json=$(mktemp)
+trap 'rm -f "$tmp" "$tmp_json"' EXIT
+
 echo -e "Entry title\nEntry Body" > "$tmp"
+vim "$tmp"
 
-vim $tmp
 if [ $? -ne 0 ]; then
-	echo "Error occured."
-	exit 1
+    echo "Error: vim failed."
+    exit 1
 fi
 
-echo "entry located at phys $tmp"
 cur_time=$(date -u +"%Y-%m-%dT%H:%M:%S.%3NZ")
-title_content="$(head -n 1 "$tmp")"
-body_content="$(tail -n +2 "$tmp")"
+post_uuid=$(uuidgen)
 
-# Set the entry
-jq \
-	--arg title "$title_content" \
-	--arg body "$body_content" \
-	--arg time "$cur_time" \
-	'. += [{
-		"title": $title,
-		"body": $body,
-		"time": $time,
-	}]' journal.json > "$tmp"
-if [ $? -eq 0 ]; then
-	mv "$tmp" journal.json
-	echo "Entry added."
+# More robust sanitization using jq (handles newlines, quotes, backslashes, control chars better)
+title_content=$(head -n 1 "$tmp" | jq -Rs --arg t "$(head -n 1 "$tmp")" '$t')
+body_content=$(tail -n +2 "$tmp" | jq -Rs --arg b "$(tail -n +2 "$tmp")" '$b')
+
+# Create single entry
+cat > "$tmp_json" << EOF
+[{
+  "title": $title_content,
+  "body": $body_content,
+  "time": "$cur_time",
+  "uuid": "$post_uuid"
+}]
+EOF
+
+echo "Entry located at phys: $tmp"
+cat "$tmp_json"  # For debugging
+
+# Append to journal (safer merge)
+if [ -s journal.json ]; then
+    jq --slurpfile new "$tmp_json" '. + $new[0]' journal.json > "$tmp"
+    mv "$tmp" journal.json
 else
-	echo "Failed to generate JSON"
-	exit 1
+    cp "$tmp_json" journal.json
 fi
+
+# Generate static page
+mkdir -p pages
+
+plate -I="$tmp_json" \
+    -T='<h1><!--$title--></h1><sub>Posted <span class="date"> ago<!--$time--></span></sub><br><hr><p><div class="pre"><!--$body--></div></p>' \
+    -i="post.html" \
+	-t="PLATE_BODY" \
+    -o="pages/$post_uuid.html"
+
+echo "Generated: pages/$post_uuid.html"

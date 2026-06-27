@@ -28,7 +28,7 @@ def fetch_json (url: str) -> str:
 
 user_data = [fetch_json (f"https://api.github.com/users/{GH_USER}")]
 user_data[0]["followers_data"] = fetch_json (user_data[0]["followers_url"])
-user_data[0]["readme_txt"] = fetch(f"https://raw.githubusercontent.com/{GH_USER}/{GH_USER}/refs/heads/main/README")
+user_data[0]["readme_txt"] = fetch(f"https://raw.githubusercontent.com/{GH_USER}/{GH_USER}/refs/heads/main/README.md")
 
 with open (USER_DAT_FILE, 'w') as f:
     json.dump (user_data, f, indent=4)

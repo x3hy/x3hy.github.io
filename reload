@@ -21,7 +21,7 @@ plate -qi="index_p.html" \
 	-I="data/journal.json" \
 	-t="PLATE_JOURNAL" \
 	-o="index_j.html" \
-	-T='<li><details><summary><b><!--$title--></b> <i class="date"><!--$time--> ago</i></summary><!--$body--><hr></details></li>'
+	-T='<li><a href="data/pages/<!--$uuid-->.html"><b><!--$title--></b></a> - <i><span class="date"><!--$time--></span> ago</i></li>'
 
 # Load README to page
 plate -qi="index_j.html" \
