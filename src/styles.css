@@ -31,6 +31,10 @@
 	font-display: swap;
 }
 
+:root {
+	--fg: #fcfca9;
+	--bg: #181a1b;
+}
 
 /* Basic body */
 body {
@@ -39,12 +43,12 @@ body {
 	margin: 50px 40px;
 	box-sizing:border-box;
 	font-family: "Terminus TTF", monospace;
-	color:white;
+	color: var(--fg);
 }
 
 hr {
 	margin-left:0px;
-	border-bottom:1px solid white;
+	border-bottom:1px solid var(--fg);
 	opacity:0.5;
 }
 
@@ -55,7 +59,7 @@ hr {
 
 tr > :first-child {
 	text-align:right;
-	border-right: white 1px solid;
+	border-right: 1px solid var(--fg);
 	padding-right:1ch;
 }
 
@@ -63,7 +67,7 @@ tr > :first-child {
 table tr:nth-child(odd) {background: rgba(255,255,255,0.05)}
 h1, ul, h2, h3, p, section, code, summary {margin:0px}
 button {font-family: "Terminus TTF", monospace}
-html, body {background:#181a1b !important;}
+html, body {background: var(--bg) !important;}
 ul li {list-style-type:none}
 section {max-width:600px}
 ul li a {cursor:pointer}
@@ -83,15 +87,16 @@ a { color: aqua }
 	}
 
 	table tr {
-		td {all:unset}
-		tr {border: none}
+		all:unset;
+		border-bottom: solid 1px var(--fg);
+		margin-bottom: 2ch;
 		display:flex;
 	}
 
 	tr > :first-child {
-		all:unset;
 		margin-right:1ch;
+		border-right: none;
 	}
 
-	#projects {padding:20px}
+	ul {padding:20px}
 }
