@@ -53,11 +53,6 @@ hr {
 	margin-bottom: 3ch;
 }
 
-.pre {
-	white-space: pre-line;
-	display: block;
-}
-
 tr > :first-child {
 	text-align: right;
 	border-right: 2px solid var(--fg);
