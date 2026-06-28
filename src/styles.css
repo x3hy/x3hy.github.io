@@ -59,19 +59,36 @@ hr {
 
 tr > :first-child {
 	text-align:right;
-	border-right: 1px solid var(--fg);
+	border-right: 1ch solid var(--fg);
 	padding-right:1ch;
+}
+
+button {
+	background: transparent;
+	font-family: "Terminus TTF", monospace;
+	border-radius: none;
+	color: var(--bg) !important;
+	background: var(--fg) !important;
+	outline: none;
+	border: none;
+	padding:5px 10px;
+}
+
+* {
+	margin-bottom: 0px;
+	padding-bottom: 0px;
 }
 
 /* Single liners */
 table tr:nth-child(odd) {background: rgba(255,255,255,0.05)}
-h1, ul, h2, h3, p, section, code, summary {margin:0px}
-button {font-family: "Terminus TTF", monospace}
-html, body {background: var(--bg) !important;}
-ul li {list-style-type:none}
-section {max-width:700px}
-ul li a {cursor:pointer}
-h1 {font-size:3em}
+h1, ul, h2, h3, p, section, code, summary {margin: 0px}
+html, body {background: var(--bg) !important}
+ol li {list-style-type: decimal-leading-zero}
+#projects li {list-style-type: none}
+ul li {list-style-type: square}
+section {max-width: 700px}
+ul li a {cursor: pointer}
+h1 {font-size: 3em}
 .date {opacity: 0}
 img {width: 100%}
 a { color: aqua }
