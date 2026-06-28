@@ -59,7 +59,7 @@ hr {
 
 tr > :first-child {
 	text-align:right;
-	border-right: 1ch solid var(--fg);
+	border-right: 2px solid var(--fg);
 	padding-right:1ch;
 }
 
@@ -74,16 +74,12 @@ button {
 	padding:5px 10px;
 }
 
-* {
-	margin-bottom: 0px;
-	padding-bottom: 0px;
-}
-
 /* Single liners */
 table tr:nth-child(odd) {background: rgba(255,255,255,0.05)}
 h1, ul, h2, h3, p, section, code, summary {margin: 0px}
 html, body {background: var(--bg) !important}
 ol li {list-style-type: decimal-leading-zero}
+tr > :last-child {padding-left: 1ch}
 #projects li {list-style-type: none}
 ul li {list-style-type: square}
 section {max-width: 700px}
