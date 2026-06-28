@@ -43,7 +43,7 @@ body {
 	margin: 50px 40px;
 	box-sizing:border-box;
 	font-family: "Terminus TTF", monospace;
-	color: var(--fg);
+	color: var(--fg) !important;
 }
 
 hr {
