@@ -49,8 +49,7 @@ body {
 
 hr {
 	margin-left: 0px;
-	border-bottom: 1px solid var(--fg);
-	opacity: 0.5;
+	border-bottom: 1px solid var(--alt);
 	margin-bottom: 3ch;
 }
 
@@ -62,7 +61,7 @@ tr > :first-child {
 
 mark {
 	background: var(--fg) !important;
-	color: var(--alt) !important;
+	color: var(--bg) !important;
 }
 
 button {
