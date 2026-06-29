@@ -4,7 +4,7 @@
 	src: url('font/TerminusTTF-4.49.3.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
-	font-display: swap;
+	font-display: block;
 }
 
 @font-face {
@@ -12,7 +12,7 @@
 	src: url('font/TerminusTTF-Bold-4.49.3.ttf') format('truetype');
 	font-weight: bold;
 	font-style: normal;
-	font-display: swap;
+	font-display: block;
 }
 
 @font-face {
@@ -20,7 +20,7 @@
 	src: url('font/TerminusTTF-Italic-4.49.3.ttf') format('truetype');
 	font-weight: normal;
 	font-style: italic;
-	font-display: swap;
+	font-display: block;
 }
 
 @font-face {
@@ -28,7 +28,7 @@
 	src: url('font/TerminusTTF-Bold-Italic-4.49.3.ttf') format('truetype');
 	font-weight: bold;
 	font-style: italic;
-	font-display: swap;
+	font-display: block;
 }
 
 :root {
@@ -77,20 +77,19 @@ html, body {background: var(--bg) !important}
 ol li {list-style-type: decimal-leading-zero}
 tr > :last-child {padding-left: 1ch}
 #projects li {list-style-type: none}
+a { color: aqua; cursor: pointer}
 ul li {list-style-type: square}
 h2, h3, h4 {margin-top: 3ch}
 section {max-width: 700px}
-ul li a {cursor: pointer}
 h1 {font-size: 3em}
 .date {opacity: 0}
 img {width: 100%}
-a { color: aqua }
-
 
 /* Mobile styles (basic) */
 @media (orientation: portrait){
 	section {max-width: 100%}
 	table tr:nth-child(odd){background: black}
+	ul {padding:20px}
 	body {
 		font-size: 0.7em;
 		margin: 25px 20px;
@@ -108,5 +107,4 @@ a { color: aqua }
 		border-right: none;
 	}
 
-	ul {padding:20px}
 }
