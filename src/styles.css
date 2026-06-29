@@ -94,12 +94,14 @@ img {width: 100%}
 
 /* Mobile styles (basic) */
 @media (orientation: portrait){
+	tr > :first-child {border: none}
 	section {max-width: 100%}
 	ul {padding-left: 20px}
 	body {
 		font-size: 0.7em;
 		margin: 25px 20px;
 	}
+
 
 	table tr, table tr td {
 		all: unset
