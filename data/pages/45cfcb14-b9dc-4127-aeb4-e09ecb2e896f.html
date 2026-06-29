@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="x3hy's personal website">
+	<meta name="keywords" content="project, portfolio, 9jh1, _3hy, 3hy, coding, programming.">
+	<meta name="author" content="x3hy">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="robots" content="noai, noimageai">
+	<link rel="stylesheet" href="../../src/styles.css">
+	<link rel="icon" type="image/x-icon" href="../../src/favicon.ico">
+	<script src="../../src/date.js"></script>
+</head>
+<body>
+	<a href="/"><button>Home</button></a>
+	<section>
+		<p>
+			<h1>Project version control with Git+Make</h1><sub>Posted <span class="date">2026-06-29T22:20:08.842Z</span> ago</sub><br><hr><p><div class="pre">I have a lot of projects. Recently I've found a great method for version control that is almost fully automatic. I found that you can display the GIT version by running
+				<i><code>git describe --tags --always</code></i>. This command outputs the git commit hash or, if a new version has just been released and no new commits have occured - it shows the version number (as set in the releases page in github). I found that I could easily incorperate this command into the displayed version control of my projects by writing the version to a file and then inserting that value into the <i><code>README</code></i>. I decided to modify this into a Makefile recipe that runs at build time:<br>
+			<br>
+			<code>
+			.version: README trcs
+				git describe --tags --always 2>/dev/null >$@
+				sed -i '1s/.*/PROGRAM_NAME-$(shell cat .version/' $(firstword $^)
+			</code><br>
+			<br>
+			
+			That code will generate a <i><code>.version</code></i> and the contents of the first line of the <i><code>README</code></i> file will be replaced by "<i>PROGRAM_NAME-version</i>".<br><br>
+			
+			I do think that this is a very useful system as it resolves the need for you to manually update the version values (<i>until you create a new release on GitHub</i>).</div></p>		</p>
+	</section>
+
+</body>
+</html>
