@@ -1,34 +1,34 @@
 /* Terminus TTF Font Family */
 @font-face {
-	font-family: 'Terminus TTF';
 	src: url('font/TerminusTTF-4.49.3.ttf') format('truetype');
+	font-family: 'Terminus TTF';
 	font-weight: normal;
-	font-style: normal;
 	font-display: block;
+	font-style: normal;
 }
 
 @font-face {
-	font-family: 'Terminus TTF';
 	src: url('font/TerminusTTF-Bold-4.49.3.ttf') format('truetype');
-	font-weight: bold;
-	font-style: normal;
+	font-family: 'Terminus TTF';
 	font-display: block;
+	font-style: normal;
+	font-weight: bold;
 }
 
 @font-face {
-	font-family: 'Terminus TTF';
 	src: url('font/TerminusTTF-Italic-4.49.3.ttf') format('truetype');
+	font-family: 'Terminus TTF';
+	font-display: block;
 	font-weight: normal;
 	font-style: italic;
-	font-display: block;
 }
 
 @font-face {
-	font-family: 'Terminus TTF';
 	src: url('font/TerminusTTF-Bold-Italic-4.49.3.ttf') format('truetype');
-	font-weight: bold;
-	font-style: italic;
+	font-family: 'Terminus TTF';
 	font-display: block;
+	font-style: italic;
+	font-weight: bold;
 }
 
 :root {
@@ -39,12 +39,12 @@
 
 /* Basic body */
 body {
-	height:fit-content;
-	font-size: 0.9em;
-	margin: 50px 40px;
-	box-sizing:border-box;
 	font-family: "Terminus TTF", monospace;
 	color: var(--fg) !important;
+	box-sizing:border-box;
+	height:fit-content;
+	margin: 50px 40px;
+	font-size: 0.9em;
 }
 
 hr {
@@ -54,25 +54,27 @@ hr {
 }
 
 tr > :first-child {
-	text-align: right;
 	border-right: 2px solid var(--fg);
 	padding-right: 1ch;
+	text-align: right;
 }
 
 mark {
 	background: var(--fg) !important;
+	* {color: var(--bg) !important;}
 	color: var(--bg) !important;
 }
 
+
 button {
-	background: transparent;
 	font-family: "Terminus TTF", monospace;
-	border-radius: none;
-	color: var(--bg) !important;
 	background: var(--alt) !important;
+	color: var(--bg) !important;
+	background: transparent;
+	border-radius: none;
+	padding: 5px 10px;
 	outline: none;
 	border: none;
-	padding: 5px 10px;
 }
 
 /* Single liners */
@@ -92,6 +94,7 @@ h1 {font-size: 3em}
 .date {opacity: 0}
 img {width: 100%}
 
+
 /* Mobile styles (basic) */
 @media (orientation: portrait){
 	tr > :first-child {border: none}
@@ -103,14 +106,13 @@ img {width: 100%}
 	ul {padding-left: 20px}
 
 	body {
-		font-size: 0.7em;
 		margin: 25px 20px;
+		font-size: 0.7em;
 	}
 
 
    tbody {
-	   display:flex;
-	   flex-wrap: wrap;
-   }
-
+		flex-wrap: wrap;
+		display:flex;
+	}
 }
