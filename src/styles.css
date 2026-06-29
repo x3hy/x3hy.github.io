@@ -60,6 +60,11 @@ tr > :first-child {
 	padding-right: 1ch;
 }
 
+mark {
+	background: var(--fg);
+	color: var(--alt);
+}
+
 button {
 	background: transparent;
 	font-family: "Terminus TTF", monospace;
@@ -72,7 +77,6 @@ button {
 }
 
 /* Single liners */
-table tr:nth-child(odd) {background: rgba(255,255,255,0.05)}
 h1, ul, ol, h2, h3, p, section, code, summary {margin: 0px}
 html, body {background: var(--bg) !important}
 ol li {list-style-type: decimal-leading-zero}
@@ -91,24 +95,16 @@ img {width: 100%}
 /* Mobile styles (basic) */
 @media (orientation: portrait){
 	section {max-width: 100%}
-	table tr:nth-child(odd){background: black}
-	ul {padding:20px}
+	ul {padding-left: 20px}
 	body {
 		font-size: 0.7em;
 		margin: 25px 20px;
 	}
 
-	table tr {
-		all:unset;
-		border-bottom: solid 1px var(--fg);
-		margin-bottom: 2ch;
-		display:flex;
-	}
-
-	tr > :first-child {
-		margin-right:1ch;
-		border-right: none;
-	}
+	table tr, table tr td {
+		all: unset
+   }
 
 	.mobile {display: block}
+	.notmobile {display:none}
 }

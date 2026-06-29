@@ -14,7 +14,7 @@ plate -qi="source.html" \
 	-I="data/repo.json" \
 	-t="PLATE_PROJECTS" \
 	-o="index_p.html" \
-	-T='<tr><td><a href="<!--$html_url-->"><!--$name--></a></td><td><i><!--$description--></i></td></tr>'
+	-T='<tr><td><a href="<!--$html_url-->"><!--$name--></a></td><td class="notmobile"><mark><i><!--$description--></i></mark></td></tr>'
 
 # Load the journal entries
 plate -qi="index_p.html" \
