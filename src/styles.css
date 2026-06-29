@@ -102,10 +102,13 @@ img {width: 100%}
 		margin: 25px 20px;
 	}
 
-
 	table tr, table tr td {
 		all: unset
    }
+
+	tr a:after {
+		content: ","
+	}
 
 	.mobile {display: block}
 	.notmobile {display:none}
