@@ -61,8 +61,8 @@ tr > :first-child {
 }
 
 mark {
-	background: var(--fg);
-	color: var(--alt);
+	background: var(--fg) !important;
+	color: var(--alt) !important;
 }
 
 button {
