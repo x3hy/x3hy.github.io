@@ -66,7 +66,7 @@ mark {
 }
 
 
-button {
+input, button {
 	font-family: "Terminus TTF", monospace;
 	background: var(--alt) !important;
 	color: var(--bg) !important;
@@ -75,6 +75,12 @@ button {
 	padding: 5px 10px;
 	outline: none;
 	border: none;
+	border: solid 1px var(--fg);
+	margin:5px;
+}
+
+input::-webkit-input-placeholder {
+	color: var(--bg);
 }
 
 /* Single liners */
@@ -94,7 +100,6 @@ h1 {font-size: 3em}
 .date {opacity: 0}
 img {width: 100%}
 
-
 /* Mobile styles (basic) */
 @media (orientation: portrait){
 	tr > :first-child {border: none}
@@ -110,9 +115,22 @@ img {width: 100%}
 		font-size: 0.7em;
 	}
 
-
    tbody {
 		flex-wrap: wrap;
 		display:flex;
+	}
+}
+
+.comment {
+	display: flex;
+	.name, .message {margin-right: 1ch}
+	.name {
+		font-weight:bold;
+		color: var(--alt)
+	}
+
+	.message_time {
+		font-size:0.8em;
+		color: var(--alt);
 	}
 }
