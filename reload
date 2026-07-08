@@ -16,19 +16,12 @@ plate -qi="source.html" \
 	-o="index_p.html" \
 	-T='<tr><td><a href="<!--$html_url-->"><!--$name--></a></td><td class="notmobile"><mark><i><!--$description--></i></mark></td></tr>'
 
-# Load the journal entries
-plate -qi="index_p.html" \
-	-I="data/journal.json" \
-	-t="PLATE_JOURNAL" \
-	-o="index_j.html" \
-	-T='<li><a href="data/pages/<!--$uuid-->.html"><b><!--$title--></b></a> - <i><span class="date"><!--$time--></span> ago</i></li>'
-
 # Load README to page
-plate -qi="index_j.html" \
+plate -qi="index_p.html" \
 	-I="data/user.json" \
 	-t="PLATE_ABOUTME" \
 	-o="index.html" \
 	-T='<!--$readme_txt-->'
 
 # Remove tmp files (plate has no daisy chaining)
-rm index_p.html index_j.html
+rm index_p.html
