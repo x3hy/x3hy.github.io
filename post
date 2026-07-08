@@ -79,7 +79,7 @@ cat "$OUT_DIR/source.html" | while read line; do
 	case "$line" in
 		*TEMPLATE_BODY*) # Content page body
 			find $OUT_DIR -type d -maxdepth 1 | tail -n+2 | while read POST_PATH; do
-				load_post "$POST_PATH"
+				#load_post "$POST_PATH"
 				# For each post (stat config is GNU/Linux only)
 				PATH_BASE="$(basename "$POST_PATH")"
 				POST_TITLE=$(cat "$POST_PATH/.title")
