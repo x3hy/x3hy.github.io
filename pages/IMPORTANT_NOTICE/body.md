@@ -11,6 +11,7 @@ horizontal line:
 ---
 
 **BOLD** *italic*
+<br>
 ```
 code block
 goes here

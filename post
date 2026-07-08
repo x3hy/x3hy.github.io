@@ -95,3 +95,4 @@ cat "$OUT_DIR/source.html" | while read line; do
 		*) echo "$line" ;; # Other
 	esac
 done > "$OUT_DIR/index.html"
+echo "Reloaded posts"
