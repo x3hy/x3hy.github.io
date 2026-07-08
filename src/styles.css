@@ -79,16 +79,17 @@ input, button {
 	margin:5px;
 }
 
-input::-webkit-input-placeholder {
-	color: var(--bg);
-}
+
+
 
 /* Single liners */
 h1, ul, ol, h2, h3, p, section, code, summary {margin: 0px}
+input::-webkit-input-placeholder {color: var(--bg)}
 html, body {background: var(--bg) !important}
 ol li {list-style-type: decimal-leading-zero}
 tr > :last-child {padding-left: 1ch}
 #projects li {list-style-type: none}
+code {border:solid 1px var(--alt)}
 ul li {list-style-type: square}
 h2, h3, h4 {margin-top: 3ch}
 section {max-width: 700px}
