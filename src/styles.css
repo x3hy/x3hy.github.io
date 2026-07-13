@@ -108,30 +108,12 @@ img {width: 100%}
 	section {max-width: 100%}
 	tr a:after {content: ","}
 	.notmobile {display:none}
+	body {margin: 25px 20px}
 	.mobile {display: block}
 	ul {padding-left: 20px}
 
-	body {
-		margin: 25px 20px;
-		font-size: 0.7em;
-	}
-
-   tbody {
+	tbody {
 		flex-wrap: wrap;
 		display:flex;
-	}
-}
-
-.comment {
-	display: flex;
-	.name, .message {margin-right: 1ch}
-	.name {
-		font-weight:bold;
-		color: var(--alt)
-	}
-
-	.message_time {
-		font-size:0.8em;
-		color: var(--alt);
 	}
 }
