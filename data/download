@@ -2,12 +2,13 @@
 # Fetches the json data from github
 
 import json
+from os import getenv
 from urllib.request import urlopen, Request
 
 GH_USER="x3hy"
 USER_DAT_FILE="user.json"
 REPO_DAT_FILE="repo.json"
-TOKEN=""
+TOKEN=getenv("GH_AUTH_TOKEN")
 
 headers = {
     "Authorization": f"Bearer {TOKEN}",
