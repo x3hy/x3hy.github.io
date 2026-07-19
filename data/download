@@ -9,6 +9,9 @@ GH_USER="x3hy"
 USER_DAT_FILE="user.json"
 REPO_DAT_FILE="repo.json"
 TOKEN=getenv("GH_AUTH_TOKEN")
+if TOKEN == None:
+    print("No GH_AUTH_TOKEN set")
+    quit()
 
 headers = {
     "Authorization": f"Bearer {TOKEN}",
